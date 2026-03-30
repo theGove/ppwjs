@@ -1,0 +1,403 @@
+<h1 id="your-first-lines-of-code">Your First Lines of Code</h1>
+<h2 id="writing-and-running-simple-statements">Writing and Running
+Simple Statements</h2>
+<p>Before you can build programs that make decisions, loop through data,
+or interact with the world, you need to get comfortable with the
+smallest building block of all: the <strong>statement</strong>. A
+statement is a single instruction that tells the computer to do
+something. It might display a message, perform a calculation, or store a
+piece of information. Think of statements as the individual sentences in
+the language of programming.</p>
+<p>In JavaScript, a simple statement might look like this:</p>
+<p>console.log(“Hello, world!”)</p>
+<p>This line tells the computer to print a message. That’s it. One
+instruction, one action. But this tiny example captures the essence of
+programming: you write a clear command, and the computer carries it out
+exactly.</p>
+<h3 id="what-makes-a-statement-simple">What Makes a Statement
+“Simple”</h3>
+<p>A simple statement usually does one thing:</p>
+<ul>
+<li>Display a value<br />
+</li>
+<li>Perform a calculation<br />
+</li>
+<li>Assign a variable<br />
+</li>
+<li>Call a function</li>
+</ul>
+<p>For example:</p>
+<p>5 + 7</p>
+<p>This calculates a number, though it doesn’t show the result anywhere.
+Or:</p>
+<p>let name = “Ava”</p>
+<p>This stores a piece of information for later use. Each of these lines
+is a complete thought, expressed in code.</p>
+<h3 id="running-your-first-statements">Running Your First
+Statements</h3>
+<p>You can run simple statements in several environments, but the
+easiest place to start is the <strong>browser console</strong>. Open
+your browser’s developer tools, switch to the Console tab, and type:</p>
+<div class="console">
+<p>2 + 3</p>
+</div>
+<p>Press Enter, and the console will show the result. Try a few
+more:</p>
+<div class="console">
+<p>“JavaScript is fun!”</p>
+</div>
+<div class="console">
+<p>console.log(10 * 10)</p>
+</div>
+<div class="console">
+<p>let x = 42<br />
+x</p>
+</div>
+<p>Each statement runs immediately, giving you instant feedback. This
+rapid loop—write, run, observe—is one of the best ways to learn.</p>
+<h3 id="ending-statements">Ending Statements</h3>
+<p>Most JavaScript statements end with a semicolon. Technically,
+JavaScript can often figure out where a statement ends even if you leave
+the semicolon out, but using them consistently makes your code clearer
+and avoids subtle bugs. Think of semicolons as punctuation that helps
+the computer read your instructions cleanly.</p>
+<h3 id="why-simple-statements-matter">Why Simple Statements Matter</h3>
+<p>It’s tempting to rush ahead to bigger, more exciting programs, but
+mastering simple statements is essential. They’re the foundation for
+everything else you’ll write. Even the most complex applications are
+built from thousands of small, clear instructions just like these.</p>
+<p>As you continue through this book, you’ll combine simple statements
+into larger structures—functions, loops, conditionals, and full
+programs. But it all starts here: one line of code, one action, one step
+toward thinking like a programmer.</p>
+<h2 id="console.log-and-basic-output"><code>console.log()</code> and
+Basic Output</h2>
+<p>Before you can build anything meaningful in JavaScript, you need a
+way to <em>see</em> what your code is doing. That’s where
+<code>console.log()</code> comes in. It’s one of the simplest tools in
+the language, yet you’ll use it constantly—whether you’re just starting
+out or working on complex applications years from now.</p>
+<p><code>console.log()</code> sends a message to the console, a built‑in
+panel in your browser or development environment where JavaScript can
+display information. Think of it as your program’s voice. Whenever you
+want to check a value, confirm that a piece of code is running, or
+understand what’s happening inside your program, you log it.</p>
+<p>A basic example looks like this:</p>
+<p>console.log(“Hello, JavaScript!”)</p>
+<p>When you run this line, the message appears in the console. It’s
+simple, but it’s the foundation of how you’ll observe and understand
+your code.</p>
+<h3 id="why-console.log-matters">Why <code>console.log()</code>
+Matters</h3>
+<p>At first glance, logging might seem trivial, but it plays several
+important roles:</p>
+<ul>
+<li><strong>Seeing results</strong>: You can display numbers, text,
+variables, or calculations.<br />
+</li>
+<li><strong>Debugging</strong>: When something isn’t working, logging
+helps you trace the problem.<br />
+</li>
+<li><strong>Understanding flow</strong>: You can log messages to see
+which parts of your program run and in what order.<br />
+</li>
+<li><strong>Learning</strong>: As a beginner, logging is your window
+into how JavaScript behaves.</li>
+</ul>
+<p>It’s not an exaggeration to say that <code>console.log()</code> is
+one of the most important tools you’ll use while learning.</p>
+<h3 id="logging-different-kinds-of-values">Logging Different Kinds of
+Values</h3>
+<p>You can log almost anything:</p>
+<p>console.log(42) // numbers<br />
+console.log(“Learning JS”) // strings<br />
+console.log(true) // booleans<br />
+console.log(5 + 7) // expressions</p>
+<p>Note: Any text following a “//” will be completely ignored by the
+Apps Script interpreter, this text is called a comment. You can use a
+comment to make a note of what a specific line of code does, record your
+thought process, or even disable sections of code that you don’t want to
+run but also don’t want to delete.</p>
+<p>You can also log multiple values at once:</p>
+<p>console.log(“The total is:”, 5 + 7)</p>
+<p>The console will print both the text and the result, making it easy
+to understand what’s happening.</p>
+<h3 id="using-the-console-in-your-browser">Using the Console in Your
+Browser</h3>
+<p>To try this out:</p>
+<ol type="1">
+<li>Open your browser.<br />
+</li>
+<li>Right‑click anywhere and choose <strong>Inspect</strong> or
+<strong>Developer Tools</strong>.<br />
+</li>
+<li>Click the <strong>Console</strong> tab.</li>
+</ol>
+<p>Type a line like:<br />
+console.log(“Testing output”)</p>
+<ol start="4" type="1">
+<li></li>
+<li>Press Enter.</li>
+</ol>
+<p>You’ll see the message appear immediately. This instant feedback loop
+is one of the best ways to experiment and build confidence.</p>
+<h3 id="output-isnt-just-for-beginners">Output Isn’t Just for
+Beginners</h3>
+<p>Even experienced developers rely on logging. It’s a quick, flexible
+way to understand what your code is doing without setting up complex
+tools. As your programs grow, you’ll learn more advanced debugging
+techniques, but <code>console.log()</code> will always remain part of
+your toolkit.</p>
+<p>For now, think of it as your first and most reliable way to
+communicate with your program. Every time you wonder “What’s going on
+here?”, a well‑placed <code>console.log()</code> can give you the
+answer.</p>
+<h2 id="understanding-errors-and-debugging-early">Understanding Errors
+and Debugging Early</h2>
+<p>Every programmer—beginner or expert—runs into errors. In fact,
+encountering errors is not a sign that you’re doing something wrong;
+it’s a sign that you’re <em>programming</em>. Errors are simply the
+computer’s way of telling you, “I tried to follow your instructions, but
+something didn’t quite make sense.” Learning to understand and fix these
+messages early on will make you a far more confident and capable
+coder.</p>
+<h3 id="errors-are-part-of-the-process">Errors Are Part of the
+Process</h3>
+<p>When you’re learning a new language, you expect to stumble over
+grammar or vocabulary. Learning a programming language is no different.
+You’ll misspell a variable name, forget a parenthesis, or use a feature
+incorrectly. Instead of getting frustrated, treat errors as feedback.
+They point you directly to what needs attention.</p>
+<p>A typical JavaScript error might look like this:</p>
+<p>Uncaught ReferenceError: myVariable is not defined</p>
+<p>It may seem intimidating at first, but with practice you’ll learn to
+read these messages like clues in a puzzle.</p>
+<h3 id="types-of-errors-youll-see">Types of Errors You’ll See</h3>
+<p>Most beginner errors fall into a few categories:</p>
+<ul>
+<li><strong>Syntax errors</strong>: You wrote something the computer
+can’t parse—missing brackets, stray characters, or incorrect
+punctuation.<br />
+</li>
+<li><strong>Reference errors</strong>: You tried to use a variable or
+function that doesn’t exist (or isn’t spelled the way you think).<br />
+</li>
+<li><strong>Type errors</strong>: You attempted an operation that
+doesn’t make sense, like calling something that isn’t a function.<br />
+</li>
+<li><strong>Logic errors</strong>: The code runs, but it doesn’t do what
+you intended. These are trickier because the computer doesn’t
+complain—you just get the wrong result.</li>
+</ul>
+<p>Understanding which category you’re dealing with helps you narrow
+down the fix.</p>
+<h3 id="reading-error-messages">Reading Error Messages</h3>
+<p>Error messages often feel cryptic at first, but they’re surprisingly
+helpful once you know how to interpret them. They usually tell you:</p>
+<ul>
+<li><strong>What went wrong</strong><br />
+</li>
+<li><strong>Where it happened</strong> (a line number or file)<br />
+</li>
+<li><strong>Why the computer couldn’t continue</strong></li>
+</ul>
+<p>For example:</p>
+<p>Uncaught SyntaxError: Unexpected token ‘}’</p>
+<p>This tells you the computer found a closing brace it wasn’t
+expecting—usually a sign that something earlier in the code is
+missing.</p>
+<h3 id="debugging-your-first-toolkit">Debugging: Your First Toolkit</h3>
+<p>Debugging is the process of finding and fixing problems in your code.
+Early on, you’ll rely on a few simple but powerful techniques:</p>
+<ul>
+<li><strong>Use <code>console.log()</code></strong> to check values and
+confirm your code is running where you expect.<br />
+</li>
+<li><strong>Read error messages slowly</strong>, one piece at a
+time.<br />
+</li>
+<li><strong>Check for typos</strong>, especially in variable
+names.<br />
+</li>
+<li><strong>Comment out sections of code</strong> to isolate the
+problem.<br />
+</li>
+<li><strong>Test small pieces</strong> before combining them into
+something bigger.</li>
+</ul>
+<p>These habits will save you hours of frustration and help you build a
+strong foundation.</p>
+<h3 id="debugging-builds-understanding">Debugging Builds
+Understanding</h3>
+<p>Fixing errors isn’t just about making your code work—it’s how you
+learn. Each time you track down a bug, you deepen your understanding of
+how JavaScript behaves. You start to anticipate problems before they
+happen, and you become more deliberate in how you write code.</p>
+<p>By embracing errors early, you’ll develop the mindset of a
+programmer: curious, patient, and unafraid to experiment. Debugging
+isn’t a chore—it’s a skill, and one of the most valuable ones you’ll
+gain on your programming journey.</p>
+<h2 id="the-idea-of-syntax-and-structure">The Idea of Syntax and
+Structure</h2>
+<p>Every language—spoken or written—has rules that determine how words
+fit together to form meaningful sentences. Programming languages are no
+different. <strong>Syntax</strong> is the set of rules that defines how
+you must write your code so the computer can understand it.
+<strong>Structure</strong> is how those rules fit together to form
+larger, coherent programs.</p>
+<p>If syntax is the grammar, structure is the organization.</p>
+<h3 id="why-syntax-matters">Why Syntax Matters</h3>
+<p>Computers are incredibly literal. They don’t interpret tone, guess
+your intent, or fill in missing pieces. If you forget a parenthesis,
+misspell a keyword, or place something in the wrong order, the computer
+can’t proceed. It stops and reports an error because the instruction no
+longer fits the expected pattern.</p>
+<p>For example, this is valid JavaScript:</p>
+<p>console.log(“Hello”)</p>
+<p>But remove one character:</p>
+<p>console.log(“Hello”</p>
+<p>Suddenly the computer has no idea where the statement ends. A human
+might overlook the missing parenthesis, but the computer cannot.</p>
+<p>Syntax rules ensure clarity. They create a predictable structure that
+both you and the machine can rely on.</p>
+<h3 id="the-building-blocks-of-javascript-syntax">The Building Blocks of
+JavaScript Syntax</h3>
+<p>As you learn JavaScript, you’ll encounter several recurring
+elements:</p>
+<ul>
+<li><strong>Keywords</strong> like <code>let</code>, <code>if</code>,
+<code>function</code><br />
+</li>
+<li><strong>Symbols</strong> like <code>{}</code>, <code>()</code>,
+<code>[]</code>, <code>;</code><br />
+</li>
+<li><strong>Operators</strong> like <code>+</code>, <code>-</code>,
+<code>===</code><br />
+</li>
+<li><strong>Comments</strong> <code>//</code><br />
+</li>
+<li><strong>Values</strong> like numbers, strings, and booleans<br />
+</li>
+<li><strong>Identifiers</strong> (names you create for variables and
+functions)</li>
+</ul>
+<p>Each of these has a specific role and must appear in the right place
+for your code to make sense.</p>
+<h3 id="structure-how-code-fits-together">Structure: How Code Fits
+Together</h3>
+<p>While syntax governs the details, structure governs the big picture.
+Structure is how you organize your code so it’s readable, logical, and
+easy to maintain.</p>
+<p>For example, JavaScript uses <strong>curly braces</strong> to group
+related statements:</p>
+<p>if (score &gt; 10) {<br />
+console.log(“You win!”)<br />
+console.log(“Great Work!”)<br />
+}</p>
+<p>The braces show that both console.log statements belong to the
+<code>if</code> condition. Without them, the computer would only execute
+the first one based on the condition. The second would execute every
+time regardless of the value of the “score” variable. So, the braces
+tell the computer to handle the two (or more) statements together. They
+will either both execute or neither will.</p>
+<p>Structure also includes:</p>
+<ul>
+<li>Indentation to show hierarchy<br />
+</li>
+<li>Grouping related code into functions<br />
+</li>
+<li>Keeping variable names meaningful<br />
+</li>
+<li>Writing code in a logical order</li>
+</ul>
+<p>Good structure makes your programs easier to understand—not just for
+the computer, but for you and anyone else who reads your code later.</p>
+<h3 id="syntax-structure-clear-communication">Syntax + Structure = Clear
+Communication</h3>
+<p>Programming is ultimately about communication. You’re expressing
+ideas in a form the computer can execute. Syntax ensures your message is
+valid; structure ensures it’s understandable.</p>
+<p>As you continue through this book, you’ll see how these two concepts
+work together. You’ll learn the rules, but you’ll also learn how to
+write code that feels clean, organized, and intentional. Mastering
+syntax and structure early will make everything else in programming feel
+more natural.</p>
+<p>An easy way for your code to communicate clearly is to use comments.
+It is wise to add comments throughout your code to give an explanation
+about any complicated parts. If you clearly explain what each section of
+your code does in comments it will be much easier for you to understand
+what you have written when you refer to it months later.</p>
+<p>Example of comments:</p>
+<p>//This section of code will print “You win!”<br />
+//and “Great work!” if the score is above 10<br />
+if (score &gt; 10) {<br />
+console.log(“You win!”)<br />
+console.log(“Great Work!”)<br />
+}</p>
+<h2
+id="transitioning-to-google-apps-script-in-google-sheets">Transitioning
+to Google Apps Script in Google Sheets</h2>
+<p>Up to this point, you’ve been learning JavaScript in its simplest
+form—writing small statements, experimenting in the console, and getting
+comfortable with the language’s basic building blocks. Now it’s time to
+take those skills somewhere more practical, somewhere you can see your
+code interact with real data and real tools you already use every
+day.</p>
+<p>For the next part of this book, we’ll shift our focus to
+<strong>Google Apps Script</strong>, a JavaScript‑based environment that
+runs inside Google Workspace. We’ll anchor our learning inside
+<strong>Google Sheets</strong>, one of the most flexible and useful
+tools available.</p>
+<h3 id="why-move-to-google-apps-script-now">Why Move to Google Apps
+Script Now</h3>
+<p>Google Apps Script is a natural next step because it lets you apply
+your new programming skills to tasks that matter—automating
+spreadsheets, generating reports, cleaning data, sending emails, and
+building custom tools that live right inside your Google account. It’s
+JavaScript with superpowers, connected directly to your documents, your
+Drive, and your workflows.</p>
+<p>This environment is ideal for beginners because:</p>
+<ul>
+<li>You don’t need to install anything.<br />
+</li>
+<li>You can write code directly in your browser.<br />
+</li>
+<li>You get immediate, visible results in a spreadsheet.<br />
+</li>
+<li>The scripting language is close to the JavaScript you’ve already
+learned.<br />
+</li>
+<li>You can build genuinely useful tools with just a few lines of
+code.</li>
+</ul>
+<h3 id="what-youll-learn-in-google-sheets">What You’ll Learn in Google
+Sheets</h3>
+<p>As we move into Apps Script, you’ll learn how to:</p>
+<ul>
+<li>Write functions that read and modify spreadsheet data<br />
+</li>
+<li>Create custom menus and buttons<br />
+</li>
+<li>Automate repetitive tasks<br />
+</li>
+<li>Build small applications that live inside Sheets<br />
+</li>
+<li>Connect your spreadsheet to other Google services like Gmail or
+Drive</li>
+</ul>
+<p>This is where programming starts to feel powerful. Instead of writing
+code in isolation, you’ll be shaping tools that interact with real
+information.</p>
+<h3 id="how-this-transition-works">How This Transition Works</h3>
+<p>Don’t worry—you’re not leaving JavaScript behind. Apps Script
+<em>is</em> JavaScript, just running in a different environment with
+additional features. Everything you’ve learned so far still applies.
+You’ll simply be adding new abilities, like accessing spreadsheet cells
+or responding to user actions.</p>
+<p>Think of this as moving from practicing chords to playing your first
+song. The fundamentals stay the same, but now you get to create
+something meaningful.</p>
+<hr />
+<p>With that foundation in place, the next chapter will guide you into
+Google Sheets, show you how to open the Apps Script editor, and help you
+write your first script that interacts with real spreadsheet data.</p>
