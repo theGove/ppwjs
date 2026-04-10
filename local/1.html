@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='en-US' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link href='https://www.blogger.com/static/v1/widgets/335934321-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>book1007</title>
+<!-- external libraries -->
+<script src='https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js'></script>
+<!-- font links -->
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900' rel='stylesheet'/>
+<!-- button icon -->
+<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' rel='stylesheet'/>
+<style id='page-skin-1' type='text/css'><!--
+:root {
+--font-zoom: 1;
+}
+body {
+font-family: "Verdana", "Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: calc(1rem  * var(--font-zoom));
+}
+.module{
+display:none
+}
+h1:has(span.header-section-number){
+display:none;
+}
+.material-symbols-outlined{
+font-size: calc(1rem  * var(--font-zoom));
+cursor:pointer;
+user-select:none;
+}
+summary::marker {
+color: #888;
+}
+#msg-galley{
+position:fixed;gf
+top:0;
+right:0;
+height:100vh;
+min-width:calc(20rem  * var(--font-zoom));
+max-width:50%;
+z-index:12;
+background-color: transparent;
+pointer-events: none;
+padding: .5rem .5rem 0 0;
+font-family: "Roboto", serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+.msg-close{
+position:absolute;
+top:calc(3px  * var(--font-zoom));
+right:calc(3px  * var(--font-zoom));
+padding:.05rem;
+background-color:red;
+color: white;
+font-weight:500;
+font-size:calc(.5rem  * var(--font-zoom));
+height:calc(1rem  * var(--font-zoom));
+cursor:pointer;
+}
+.msg-dialog{
+position: relative;
+background-color:#eee;
+margin-bottom:.5rem;
+pointer-events: auto;
+border-radius:5px;
+border: 1px solid black;
+}
+.msg-button-{
+margin: 0 .5rem .5rem 0;
+}
+.msg-button-bar{
+background-color:#ddd;
+text-align:center;
+padding:.5rem .5rem .5rem;
+border-radius:0 0 5px 5px;
+}
+.msg-title{
+background-color:darkblue;
+color:#eee;
+font-weight:500;
+border-radius:5px 5px 0 0;
+padding-left:.5rem;
+}
+.msg-message{
+background-color:#eee;
+padding: .5rem;
+border-radius:0 0 5px 5px;
+}
+#page-data{
+display:none
+}
+#menu{
+top:0;
+left:-100px;
+position:fixed;
+display:none;
+background-color:#eee;
+padding:0;
+z-index:11;
+transition: .3s;
+height:100vh;
+min-width:20vw;
+max-width:75vw;
+overflow: auto;
+}
+#book-data{display:none}
+#menu-content{
+padding:.6rem;
+}
+.menu-button{
+padding:.2rem 1rem 0 .5rem;
+cursor:pointer;
+color:#888;
+}
+.menu-header{
+top:0;
+position:sticky;
+background-color:#eee;
+opacity:1;
+margin:0;
+}
+#search-div{
+width:200px;
+white-space: nowrap;
+}
+#search-div h6{
+margin:1rem 0 0 0;
+font-size:14px;
+}
+#search-button{
+padding-left:0;
+}
+#search-results{
+font-size:12px;
+}
+.search-result{
+margin-top:10px;
+padding:5px;
+cursor:pointer;
+}
+.search-result:hover{
+background-color:white;
+}
+.search-result-title{
+font-weight:bold;
+}
+.search-result-line{
+margin:0 0 5px 10px;
+}
+.search-term{
+background-color:yellow;
+}
+.chapter-result-link{
+color:black;
+}
+.toc-section-container{
+margin-left:.6rem;
+}
+.toc-text-container{
+margin-left:1.6rem;
+}
+.chapter-section{
+margin-top: calc(3rem  * var(--font-zoom));
+margin-bottom: calc(3rem  * var(--font-zoom));
+}
+.hide{
+display:none
+}
+img{
+max-width:100%;
+}
+.entry-header{
+position:fixed;
+top:0;
+left: 0;
+width: 100%;
+transition:all 0.1s;
+padding: .1rem;
+-webkit-user-select: none; /* Safari */
+user-select: none; /* Standard syntax */
+background: rgba(200, 200, 200, 1.0);
+z-index:10;
+}
+button.nav{
+border-radius:5px;
+}
+.nav{
+position: fixed;
+bottom: 5px;
+opacity:1.0;
+transition:all 0.6s;
+pointer-events: all;
+}
+.dim-button:hover{opacity: 1.0;}
+.dim-button{opacity: .2;}
+.dim-header:hover{opacity: 1.0;}
+.dim-header{opacity: 0;}
+#prior-button {
+left: 5px;
+}
+#next-button {
+right: 5px;
+}
+.span-link{
+cursor:pointer;
+color:green;
+}
+.span-link:hover{
+text-decoration: underline;
+color:blue;
+}
+a:link {color: green; text-decoration:none}
+a:visited {color: green;}
+a:hover {background-color: #ddd;}
+a:active {color: green;}
+.book-title{
+margin-top: 5rem;
+font-size:calc(3rem  * var(--font-zoom));
+text-align: center;
+font-weight: bold;
+}
+.book-author{
+margin-top: 2rem;
+font-size:calc(2rem  * var(--font-zoom));
+text-align: center;
+}
+.book-toc{
+text-align: center;
+margin-top:2rem;
+}
+.book-chapters{
+display: inline-block;
+}
+.book-chapter{
+text-align:left;
+padding-left: 1rem;
+text-indent: -1rem;
+margin-bottom: 0.3rem;
+}
+.tool {
+cursor:pointer;
+font-size:calc(18px  * var(--font-zoom));
+font-weight:300;
+vertical-align: middle;
+padding-left:.6rem;
+color:#666;
+}
+.lead-in{
+margin-top:4rem;
+}
+.example, .indent, .category{
+margin:1rem 0 0 1rem;
+}
+.category div:first-child{
+color:red;
+}
+.example div:first-child{
+color:red;
+font-style: italic;
+}
+h1{
+font-size:1.5rem;
+color:#333;
+}
+h2, h3{
+color:darkred;
+}
+p{
+margin-top:0;
+}
+p.vignette{
+color:red
+}
+.no-dot{
+list-style-type: none;
+}
+ul.no-dot li{
+padding-left: 1rem;
+text-indent: -1rem;
+margin-bottom: 0.3rem;
+}
+audio{
+height:30px;
+}
+div.post-body{
+max-width:900px;
+margin:0 auto;
+padding:1rem;
+background-color:white;
+padding-top:2rem;
+}
+div.index-boxnbt{
+background-color:#eee;
+}
+.material-symbols-outlined {
+font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+font-size: 18px;
+line-height: 1;
+}
+.monaco {
+width: 100%;
+margin: 1.25rem 0;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.monaco-bar {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 2px;
+padding: 6px 10px;
+background: #2d2d2d;
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.monaco-bar-label {
+flex: 1;
+font-family: 'Inter', sans-serif;
+font-size: 11px;
+font-weight: 500;
+color: #6e7681;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+padding-left: 4px;
+}
+.monaco-tool {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+border-radius: 6px;
+color: #8b949e;
+cursor: pointer;
+transition: background 0.15s ease, color 0.15s ease;
+}
+.monaco-tool:hover {
+background: rgba(255, 255, 255, 0.1);
+color: #e6edf3;
+}
+.monaco-tool:active {
+background: rgba(255, 255, 255, 0.06);
+transform: scale(0.92);
+}
+.monaco-tool[data-action="run"]:hover {
+background: rgba(63, 185, 80, 0.18);
+color: #3fb950;
+}
+.editor-holder {
+background-color: #1e1e1e;
+padding: 8px 0;
+}
+.editor {
+margin: 0;
+padding: 0;
+}
+.console {
+background: #161b22;
+border-top: 1px solid rgba(255, 255, 255, 0.07);
+padding: 8px 0 6px;
+position: relative;
+min-height: 36px;
+font-family: 'Consolas', 'Cascadia Code', 'Courier New', monospace;
+font-size: 13px;
+}
+.console-line {
+color: #c9d1d9;
+padding: 2px 40px 2px 14px;
+line-height: 1.6;
+white-space: pre-wrap;
+word-break: break-all;
+}
+.console-line:first-of-type {
+margin-top: 2px;
+}
+.console-line.error {
+color: #f85149;
+background: rgba(248, 81, 73, 0.06);
+}
+span.exitButton {
+position: absolute;
+top: 6px;
+right: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 22px;
+height: 22px;
+border-radius: 4px;
+color: #6e7681;
+cursor: pointer;
+transition: background 0.15s ease, color 0.15s ease;
+}
+span.exitButton:hover {
+background: rgba(255, 255, 255, 0.1);
+color: #c9d1d9;
+}
+span.exitButton .material-symbols-outlined {
+font-size: 15px;
+}
+pre.code {
+color: #a8ff78;
+background: #0d1117;
+padding: 12px 16px;
+margin: 1.25rem 0;
+font-size: 14px;
+border-radius: 8px;
+border: 1px solid rgba(255, 255, 255, 0.07);
+overflow-x: auto;
+}
+
+--></style>
+<script>
+    const localhost = location.hostname===`127.0.0.1` || location.hostname===`localhost`
+	async function initialize(){
+
+      const kind = document.getElementById(`kind`).innerHTML
+      console.log(`kind`, kind)
+      switch(kind){
+        case `redirect`:
+          location.href=document.getElementById(`post-json`).innerText
+          return
+        case `chapter`:
+          console.log(`processing Chapter`)
+          // load any modules used in the chapter
+          for(const module of document.querySelectorAll(`div.module`)){
+            console.log(`module:`, module.innerText)
+            loadModule(module.innerText)
+    
+    
+    
+          }
+      }
+    
+    // calls the page that has our code in it
+    //const response = await fetch(`/1970/01/system.html`)
+  	//const code = await response.text()
+    
+ 
+	//const s = document.createElement('script')
+	//s.replaceChildren(code.split(`<p`+`re>`)[1].split(`</pre>`)[0])
+	//document.head.appendChild(s)
+    //console.log("got system")
+    await loadModule("system")
+	init()
+    
+    }
+    
+    async function loadModule(label){// get the first post of a specified label and load the code
+      const code = await getPage(label)
+      const s = document.createElement(`script`)
+      s.replaceChildren(code)
+      document.head.appendChild(s)          
+    }
+    
+    async function getPage(label){//get the first post with the specified label.
+        
+        if(localhost){
+          const url=`/tools/api/${label}.js`
+          const response = await fetch(url)
+          const code = await response.text()  
+          return code
+        }else{
+          const url=`${location.origin}/feeds/posts/default/-/${label}?alt=json`
+          const response = await fetch(url)
+          const page = await response.json()
+          return page.feed.entry[0].content.$t
+        }
+    }    
+
+  </script>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body onload='initialize()'>
+<div class='sitenbt' id='pagenbt'>
+<div class='site-contentnbt' id='contentnbt'>
+<div class='testing' id='item'></div>
+<div class='content-areanbt' id='primarynbt'>
+<div class='site-mainnbt' id='mainnbt' role='main'>
+<div class='section' id='mainblogsec'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+<div class='post-outer'>
+<article class='post'>
+<div id='msg-galley'></div>
+<div class='hide' id='kind'>chapter</div>
+<div class='index-boxnbt'>
+<header class='entry-header'>
+<h1 class='post-title entry-title' itemprop='headline'><span class='material-symbols-outlined menu-button' onclick='showMenu()'>menu</span><span id='title'>1. Welcome to Programming</span></h1>
+</header>
+<div id='menu'>
+<div class='menu-header'><span class='material-symbols-outlined menu-button' onclick='hideMenu()'>close</span><span id='book-title'><a href='toc.html'>PPWJS</a></span></div>
+<div id='menu-content'>
+<div id='toc'></div>
+<div id='tools'>
+                  Text Size: 
+                  <span class='material-symbols-outlined tool' onclick='fontSize(.1)'>text_increase</span>
+<span class='material-symbols-outlined tool' onclick='fontSize(-.1)'>text_decrease</span>
+<span class='material-symbols-outlined tool' onclick='fontSize()'>rotate_auto</span>
+</div>
+<div id='search-div'>
+<h6>Search Book</h6>
+<input id='search' placeholder='search book'/><span class='material-symbols-outlined tool' id='search-button'>search</span></div>
+<div id='search-results'></div>
+</div>
+</div>
+<div class='post-body entry-content' data-blog-id='6260729515379848323' data-post-id='7883355722472288272'>
+<button class='nav' id='prior-button' onclick='navigate(&#39;prior&#39;)'><span class='material-symbols-outlined'>arrow_back</span></button>
+<button class='nav' id='next-button' onclick='navigate(&#39;next&#39;)'><span class='material-symbols-outlined'>arrow_forward</span></button>
+              
+              <!--postBegin--><h1 data-number="1" id="welcome-to-programming"><span
+class="header-section-number">1</span> Welcome to Programming</h1>
+<h2 data-number="1.1" id="what-programming-actually-is"><span
+class="header-section-number">1.1</span> What Programming Actually
+Is</h2>
+<p>Programming is the art of giving clear, precise instructions to a
+computer so it can perform tasks on your behalf. At its core, it&#8217;s a
+conversation&#8212;one where you learn to speak in a language the computer
+understands, and the computer responds by doing exactly what you asked.
+Not &#8220;sort of&#8221; what you asked, not what you <em>meant</em> to ask, but
+precisely what your instructions describe. That precision is what makes
+programming both powerful and occasionally humbling.</p>
+<p>When you write a program, you&#8217;re breaking a problem into smaller
+steps and expressing those steps in a structured, logical way. A recipe
+is a program. A set of directions is a program. Even a morning routine
+is a kind of program. The difference is that computers don&#8217;t fill in the
+gaps the way humans do. If a recipe says &#8220;cook until done,&#8221; a person can
+figure that out. A computer cannot. It needs explicit steps, in order,
+with no ambiguity.</p>
+<p>This is why programming is more than learning syntax or memorizing
+commands. It&#8217;s learning to think in a way that a computer can follow.
+You start noticing patterns, designing solutions, and imagining how a
+machine might interpret your ideas. Over time, you develop a kind of
+mental toolkit: how to break problems down, how to test your
+assumptions, how to build something small and expand it piece by
+piece.</p>
+<p>JavaScript, the language we&#8217;ll use throughout this book, is a
+particularly friendly place to begin this journey. It runs in every
+modern web browser, which means you already have everything you need to
+start experimenting. You can write a line of code, press Enter, and
+immediately see the result. That instant feedback loop is one of the
+reasons JavaScript has become one of the most widely used languages in
+the world.</p>
+<p>But before we dive into the details, hold onto this idea: programming
+is not about being a genius or memorizing arcane rules. It&#8217;s about
+learning to express ideas clearly, test them, refine them, and build
+things that didn&#8217;t exist before. It&#8217;s a creative craft, a
+problem&#8209;solving discipline, and a surprisingly fun way to make computers
+work for you.</p>
+<p>By the time you finish this book, you won&#8217;t just know
+JavaScript&#8212;you&#8217;ll understand how to think like a programmer.</p>
+<h2 data-number="1.2" id="how-computers-think"><span
+class="header-section-number">1.2</span> How Computers Think</h2>
+<p>If programming is learning to communicate with a computer, then it
+helps to understand the mindset of the thing you&#8217;re talking to. And
+&#8220;mindset&#8221; is almost a misleading word, because computers don&#8217;t think the
+way people do. They don&#8217;t guess, they don&#8217;t infer, and they definitely
+don&#8217;t read between the lines. A computer&#8217;s version of thinking is closer
+to following a recipe with absolute, unwavering obedience.</p>
+<p>A computer processes information through a long chain of tiny
+electrical decisions&#8212;billions of them every second. Each decision is
+incredibly simple: yes or no, true or false, on or off. From these
+microscopic building blocks, everything else emerges: games, websites,
+spreadsheets, music players, navigation apps, and the entire internet.
+It&#8217;s astonishing how much complexity grows out of such simple roots.</p>
+<p>Because computers operate on these strict, binary rules, they require
+instructions that are equally strict. When you write a program, you&#8217;re
+giving the computer a sequence of steps that must be unambiguous and
+complete. If you leave out a detail, the computer won&#8217;t fill it in for
+you. If you phrase something vaguely, it won&#8217;t interpret your intent. It
+will do exactly what you wrote&#8212;even if that means doing something
+completely different from what you wanted.</p>
+<p>This is why programmers spend so much time breaking problems down. A
+task that feels obvious to a human&#8212;like &#8220;sort these names
+alphabetically&#8221;&#8212;needs to be expressed as a series of tiny, precise
+operations the computer can follow. Compare each pair of names. Decide
+which comes first. Swap them if needed. Repeat until everything is in
+order. What feels like one action to us becomes dozens or hundreds of
+micro&#8209;steps to a machine.</p>
+<p>The upside is that once a computer understands those steps, it can
+execute them with incredible speed and consistency. It never gets tired,
+never gets distracted, and never forgets a detail. That reliability is
+what makes programming so powerful: you can encode a process once, and
+the computer will carry it out perfectly every time.</p>
+<p>As you learn to program, you&#8217;ll start to adopt a bit of this
+computational way of thinking. You&#8217;ll learn to break problems into
+smaller pieces, to express ideas clearly, and to anticipate edge cases.
+You&#8217;re not trying to think <em>like</em> a computer&#8212;you&#8217;re learning to
+think <em>for</em> a computer, giving it the structure it needs to do
+the work you want.</p>
+<p>Once you grasp this, programming stops feeling mysterious. You&#8217;re no
+longer trying to guess what the computer wants. You&#8217;re learning how to
+guide it, step by precise step, toward the results you imagine.</p>
+<h2 data-number="1.3"
+id="why-javascript-is-a-great-first-language"><span
+class="header-section-number">1.3</span> Why JavaScript Is a Great First
+Language</h2>
+<p>Choosing your first programming language is a bit like choosing your
+first musical instrument. You want something approachable, versatile,
+and rewarding&#8212;something that lets you make real, satisfying progress
+early on. JavaScript fits that role beautifully, which is why millions
+of beginners start their programming journey with it.</p>
+<p>One of JavaScript&#8217;s biggest strengths is its accessibility. You don&#8217;t
+need to install special software or set up a complicated environment. If
+you have a web browser, you already have everything required to write
+and run JavaScript. You can open a console, type a line of code, and see
+the result instantly. That immediate feedback makes learning feel
+playful rather than intimidating.</p>
+<p>JavaScript is also everywhere. It powers the interactive parts of
+websites, runs on servers, controls mobile apps, automates workflows,
+and even drives hardware projects. Learning it gives you a passport into
+many different areas of technology. You can start small&#8212;maybe by
+changing the text on a webpage&#8212;and gradually build up to full
+applications without ever switching languages.</p>
+<p>Another reason JavaScript works so well for beginners is its
+forgiving nature. It doesn&#8217;t force you to understand every detail before
+you can write something useful. You can experiment freely, make
+mistakes, and learn by doing. At the same time, it&#8217;s a language that
+grows with you. As your skills develop, JavaScript reveals deeper
+layers: modern syntax, powerful libraries, and sophisticated patterns
+used by professional developers.</p>
+<p>Perhaps most importantly, JavaScript has a massive, welcoming
+community. If you get stuck, chances are someone else has asked the same
+question, written a tutorial, or shared a solution. That ecosystem of
+support makes the learning curve feel far less steep.</p>
+<p>By starting with JavaScript, you&#8217;re choosing a language that rewards
+curiosity, encourages experimentation, and opens doors to countless
+possibilities. It&#8217;s not just a tool for building websites&#8212;it&#8217;s a
+foundation for understanding how modern software works. And as you&#8217;ll
+see throughout this book, it&#8217;s a remarkably fun language to learn.</p>
+<h3 data-number="1.3.1"
+id="beyond-the-browser-where-javascript-can-run"><span
+class="header-section-number">1.3.1</span> Beyond the Browser: Where
+JavaScript Can Run</h3>
+<p>When most people think of JavaScript, they picture it running inside
+a web browser, powering buttons, animations, and interactive pages. And
+that <em>is</em> where JavaScript began. But the language has grown far
+beyond its original home. Today, JavaScript is a kind of universal
+toolkit&#8212;one that can run in browsers, on servers, inside office
+documents, in cloud environments, and even on your own computer as a
+general&#8209;purpose programming language.</p>
+<p>This book embraces that wider world. As you learn the fundamentals of
+programming, you&#8217;ll also see how JavaScript adapts to different
+environments, each with its own strengths and possibilities.</p>
+<h3 data-number="1.3.2"
+id="javascript-variants-and-scripting-platforms"><span
+class="header-section-number">1.3.2</span> JavaScript Variants and
+Scripting Platforms</h3>
+<p>Several modern platforms build on JavaScript to make it more powerful
+or more specialized:</p>
+<p><strong>Google Apps Script</strong></p>
+<ul>
+<li>A cloud&#8209;based scripting environment that lets you automate and
+extend Google Workspace apps like Sheets, Docs, Gmail, and Drive. It
+uses a JavaScript&#8209;like syntax and gives you direct access to Google
+services through simple APIs. If you&#8217;ve ever wished your spreadsheet
+could email you, or your inbox could organize itself, Apps Script makes
+that possible.</li>
+</ul>
+<p><strong>Microsoft Office Scripts</strong></p>
+<ul>
+<li>A close cousin to Apps Script, designed for automating Excel on the
+web. It uses TypeScript (a typed version of JavaScript) and lets you
+write scripts that manipulate spreadsheets, generate reports, and
+streamline repetitive tasks inside Microsoft 365.</li>
+</ul>
+<p><strong>TypeScript</strong></p>
+<ul>
+<li>A superset of JavaScript that adds optional static typing. While not
+a runtime environment on its own, TypeScript has become a major part of
+modern JavaScript development because it helps catch errors early and
+makes large projects easier to manage. Many tools&#8212;including Office
+Scripts&#8212;use TypeScript under the hood.</li>
+</ul>
+<p>These platforms share a common theme: they let you use JavaScript to
+automate real&#8209;world workflows, often without installing anything.
+They&#8217;re perfect for beginners because they provide immediate, practical
+results.</p>
+<h3 data-number="1.3.3" id="javascript-beyond-the-cloud-node.js"><span
+class="header-section-number">1.3.3</span> JavaScript Beyond the Cloud:
+Node.js</h3>
+<p>While browser&#8209;based JavaScript is powerful, it&#8217;s limited by design.
+It can&#8217;t access your file system, install software, or interact directly
+with your operating system. That&#8217;s where <strong>Node.js</strong> comes
+in.</p>
+<p>Node.js is a runtime that lets JavaScript run on your local
+machine&#8212;just like Python, Ruby, or any other general&#8209;purpose language.
+With Node.js, you can:</p>
+<ul>
+<li>Read and write files</li>
+<li>Build command&#8209;line tools</li>
+<li>Create web servers</li>
+<li>Work with databases</li>
+<li>Automate tasks on your computer</li>
+<li>Build full&#8209;stack applications</li>
+</ul>
+<p>Node.js transformed JavaScript from a browser&#8209;only language into a
+universal programming platform.</p>
+<h3 data-number="1.3.4" id="why-these-environments-matter"><span
+class="header-section-number">1.3.4</span> Why These Environments
+Matter</h3>
+<p>Exploring these different platforms gives you a broader understanding
+of what programming can do. You&#8217;ll see how the same core
+language&#8212;JavaScript&#8212;can:</p>
+<ul>
+<li>Automate your spreadsheets</li>
+<li>Extend your email</li>
+<li>Power websites</li>
+<li>Run servers</li>
+<li>Build desktop tools</li>
+<li>Interact with cloud services</li>
+</ul>
+<p>Each environment has its own flavor, but they all share the same
+foundation. Once you understand the fundamentals of programming and
+JavaScript, you can move between them with surprising ease.</p>
+<p>As you progress through this book, you&#8217;ll get hands&#8209;on experience
+with several of these platforms. You&#8217;ll learn not just how to write
+code, but how to choose the right environment for the job&#8212;and how
+JavaScript adapts to meet you wherever you want to build.</p>
+<h2 data-number="1.4" id="how-to-run-javascript"><span
+class="header-section-number">1.4</span> How to Run JavaScript</h2>
+<p>One of the reasons JavaScript makes such a great first language is
+that you can run it almost anywhere. You don&#8217;t need a special compiler,
+a powerful computer, or a complicated setup. In fact, you already have
+everything you need. This section walks you through the main ways to run
+JavaScript, from the simplest beginner&#8209;friendly options to the more
+advanced environments you&#8217;ll explore later in the book.</p>
+<h3 data-number="1.4.1"
+id="running-javascript-in-the-browser-console"><span
+class="header-section-number">1.4.1</span> Running JavaScript in the
+Browser Console</h3>
+<p>Every modern web browser&#8212;Chrome, Edge, Firefox, Safari&#8212;comes with a
+built&#8209;in JavaScript console. This is the fastest, easiest way to
+experiment.</p>
+<ol type="1">
+<li>Open any webpage.</li>
+<li>Right&#8209;click and choose <strong>Inspect</strong> or <strong>Developer
+Tools</strong>.</li>
+<li>Find the <strong>Console</strong> tab.</li>
+<li>Type something like:<br />
+console.log(&#8220;Hello from JavaScript!&#8221;)</li>
+<li>Press Enter and see the result instantly.</li>
+</ol>
+<p>The console is perfect for trying out small ideas, testing snippets,
+or learning the basics without any setup.</p>
+<p><strong>A note on semicolons:</strong> JavaScript is a member of the
+computer-program language family called the &#8220;C-family languages,&#8221; so
+named because the languages share common syntax conventions that
+originated with a language called &#8220;C.&#8221; Many of those languages require a
+semicolon to separate all statements. In JavaScript, the semicolon is
+not required to separate statements that appear on different lines. If
+you want to place two statements on a single line, you can do so by
+separating them with a semicolon. Because many other of the C-family
+languages require a semicolon between all statements, many JavaScript
+examples you find online will have semicolons at the end of each line
+even though they are not required. This is a stylistic choice. In this
+book, we will not include semicolons where they are not required to
+simplify the examples. Ultimately, it is up to you to decide if you want
+to put semicolons at the end of your JavaScript statements.</p>
+<h3 data-number="1.4.2" id="running-javascript-in-other-platforms"><span
+class="header-section-number">1.4.2</span> Running JavaScript in other
+Platforms</h3>
+<p>Throughout this book, you&#8217;ll also explore environments that use
+JavaScript or JavaScript&#8209;like languages to automate real&#8209;world
+tasks:</p>
+<ul>
+<li><strong>Online Editors</strong> for testing JavaScript on the web
+(such as JSFiddle and CodePen)</li>
+<li><strong>On a Web Page</strong> for building interactive web
+sites</li>
+<li><strong>Google Apps Script</strong> for automating Google
+Workspace</li>
+<li><strong>Microsoft Office Scripts</strong> for automating Excel on
+the web</li>
+<li><strong>Cloud&#8209;based runtimes</strong> that let you run scripts
+without managing servers\</li>
+<li><strong>Node.js</strong> allows you to run JavaScript locally on
+your computer, as opposed to in a browser</li>
+</ul>
+<p>Each of these platforms has its own way of running code, but the core
+language remains familiar.</p>
+<h3 data-number="1.4.3" id="choosing-the-right-environment"><span
+class="header-section-number">1.4.3</span> Choosing the Right
+Environment</h3>
+<p>There&#8217;s no single &#8220;correct&#8221; way to run JavaScript. The best
+environment depends on what you&#8217;re trying to do:</p>
+<ul>
+<li>Quick experiments &#8594; <strong>Browser console</strong></li>
+<li>Interactive demos &#8594; <strong>Online editors</strong></li>
+<li>Web projects &#8594; <strong>HTML + JavaScript files</strong></li>
+<li>Local tools or servers &#8594; <strong>Node.js</strong></li>
+<li>Automation &#8594; <strong>Apps Script or Office Scripts</strong></li>
+</ul>
+<p>As you move through this book, you&#8217;ll get hands&#8209;on experience with
+several of these options. By the end, running JavaScript will feel as
+natural as opening a document or sending an email.</p>
+<p>Our first detailed examples will begin in Google Apps Script.</p>
+<!--postEnd-->
+              </div>
+</div>
+</article>
+</div>
+</div>
+</div></div>
+</div><!-- #main -->
+</div><!-- #primary -->
+<!--end of error vs non error block-->
+</div><!-- #content -->
+<footer class='site-footernbt' id='colophonnbt' role='contentinfo'>
+<div id='supplementarynbt'>
+<div class='footer-widgetsnbt widget-areanbt clearnbt' id='footer-widgetsnbt' role='complementary'>
+<div class='sidebarwidgetsarea no-items section' id='sidebarwidgetsarea'></div>
+</div><!-- #footer-sidebar -->
+</div><!-- #supplementary -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/344097953-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'APlU3lyxDlBx_tUa4zzZkiRUli5k:1775845742526';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d6260729515379848323','//book1007.blogspot.com/2000/02/1.html','6260729515379848323');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6260729515379848323', 'title': 'book1007', 'url': 'https://book1007.blogspot.com/2000/02/1.html', 'canonicalUrl': 'https://book1007.blogspot.com/2000/02/1.html', 'homepageUrl': 'https://book1007.blogspot.com/', 'searchUrl': 'https://book1007.blogspot.com/search', 'canonicalHomepageUrl': 'https://book1007.blogspot.com/', 'blogspotFaviconUrl': 'https://book1007.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22book1007 - RSS\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/6260729515379848323/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/7883355722472288272/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/5ddb33369fcd32d1', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Share to X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '7883355722472288272', 'pageName': '1. Welcome to Programming', 'pageTitle': 'book1007: 1. Welcome to Programming'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '1. Welcome to Programming', 'description': '1  Welcome to Programming \r 1.1  What Programming Actually\r Is \r Programming is the art of giving clear, precise instructions to a\r computer...', 'url': 'https://book1007.blogspot.com/2000/02/1.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 7883355722472288272}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'mainblogsec', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/2626028960-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+</body>
+</html>
