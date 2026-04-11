@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='en-US' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link href='https://www.blogger.com/static/v1/widgets/335934321-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>book1007</title>
+<!-- external libraries -->
+<script src='https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js'></script>
+<!-- font links -->
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900' rel='stylesheet'/>
+<!-- button icon -->
+<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' rel='stylesheet'/>
+<style id='page-skin-1' type='text/css'><!--
+:root {
+--font-zoom: 1;
+}
+body {
+font-family: "Verdana", "Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: calc(1rem  * var(--font-zoom));
+}
+.module{
+display:none
+}
+h1:has(span.header-section-number){
+display:none;
+}
+.material-symbols-outlined{
+font-size: calc(1rem  * var(--font-zoom));
+cursor:pointer;
+user-select:none;
+}
+summary::marker {
+color: #888;
+}
+#msg-galley{
+position:fixed;gf
+top:0;
+right:0;
+height:100vh;
+min-width:calc(20rem  * var(--font-zoom));
+max-width:50%;
+z-index:12;
+background-color: transparent;
+pointer-events: none;
+padding: .5rem .5rem 0 0;
+font-family: "Roboto", serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+.msg-close{
+position:absolute;
+top:calc(3px  * var(--font-zoom));
+right:calc(3px  * var(--font-zoom));
+padding:.05rem;
+background-color:red;
+color: white;
+font-weight:500;
+font-size:calc(.5rem  * var(--font-zoom));
+height:calc(1rem  * var(--font-zoom));
+cursor:pointer;
+}
+.msg-dialog{
+position: relative;
+background-color:#eee;
+margin-bottom:.5rem;
+pointer-events: auto;
+border-radius:5px;
+border: 1px solid black;
+}
+.msg-button-{
+margin: 0 .5rem .5rem 0;
+}
+.msg-button-bar{
+background-color:#ddd;
+text-align:center;
+padding:.5rem .5rem .5rem;
+border-radius:0 0 5px 5px;
+}
+.msg-title{
+background-color:darkblue;
+color:#eee;
+font-weight:500;
+border-radius:5px 5px 0 0;
+padding-left:.5rem;
+}
+.msg-message{
+background-color:#eee;
+padding: .5rem;
+border-radius:0 0 5px 5px;
+}
+#page-data{
+display:none
+}
+#menu{
+top:0;
+left:-100px;
+position:fixed;
+display:none;
+background-color:#eee;
+padding:0;
+z-index:11;
+transition: .3s;
+height:100vh;
+min-width:20vw;
+max-width:75vw;
+overflow: auto;
+}
+#book-data{display:none}
+#menu-content{
+padding:.6rem;
+}
+.menu-button{
+padding:.2rem 1rem 0 .5rem;
+cursor:pointer;
+color:#888;
+}
+.menu-header{
+top:0;
+position:sticky;
+background-color:#eee;
+opacity:1;
+margin:0;
+}
+#search-div{
+width:200px;
+white-space: nowrap;
+}
+#search-div h6{
+margin:1rem 0 0 0;
+font-size:14px;
+}
+#search-button{
+padding-left:0;
+}
+#search-results{
+font-size:12px;
+}
+.search-result{
+margin-top:10px;
+padding:5px;
+cursor:pointer;
+}
+.search-result:hover{
+background-color:white;
+}
+.search-result-title{
+font-weight:bold;
+}
+.search-result-line{
+margin:0 0 5px 10px;
+}
+.search-term{
+background-color:yellow;
+}
+.chapter-result-link{
+color:black;
+}
+.toc-section-container{
+margin-left:.6rem;
+}
+.toc-text-container{
+margin-left:1.6rem;
+}
+.chapter-section{
+margin-top: calc(3rem  * var(--font-zoom));
+margin-bottom: calc(3rem  * var(--font-zoom));
+}
+.hide{
+display:none
+}
+img{
+max-width:100%;
+}
+.entry-header{
+position:fixed;
+top:0;
+left: 0;
+width: 100%;
+transition:all 0.1s;
+padding: .1rem;
+-webkit-user-select: none; /* Safari */
+user-select: none; /* Standard syntax */
+background: rgba(200, 200, 200, 1.0);
+z-index:10;
+}
+button.nav{
+border-radius:5px;
+}
+.nav{
+position: fixed;
+bottom: 5px;
+opacity:1.0;
+transition:all 0.6s;
+pointer-events: all;
+}
+.dim-button:hover{opacity: 1.0;}
+.dim-button{opacity: .2;}
+.dim-header:hover{opacity: 1.0;}
+.dim-header{opacity: 0;}
+#prior-button {
+left: 5px;
+}
+#next-button {
+right: 5px;
+}
+.span-link{
+cursor:pointer;
+color:green;
+}
+.span-link:hover{
+text-decoration: underline;
+color:blue;
+}
+a:link {color: green; text-decoration:none}
+a:visited {color: green;}
+a:hover {background-color: #ddd;}
+a:active {color: green;}
+.book-title{
+margin-top: 5rem;
+font-size:calc(3rem  * var(--font-zoom));
+text-align: center;
+font-weight: bold;
+}
+.book-author{
+margin-top: 2rem;
+font-size:calc(2rem  * var(--font-zoom));
+text-align: center;
+}
+.book-toc{
+text-align: center;
+margin-top:2rem;
+}
+.book-chapters{
+display: inline-block;
+}
+.book-chapter{
+text-align:left;
+padding-left: 1rem;
+text-indent: -1rem;
+margin-bottom: 0.3rem;
+}
+.tool {
+cursor:pointer;
+font-size:calc(18px  * var(--font-zoom));
+font-weight:300;
+vertical-align: middle;
+padding-left:.6rem;
+color:#666;
+}
+.lead-in{
+margin-top:4rem;
+}
+.example, .indent, .category{
+margin:1rem 0 0 1rem;
+}
+.category div:first-child{
+color:red;
+}
+.example div:first-child{
+color:red;
+font-style: italic;
+}
+h1{
+font-size:1.5rem;
+color:#333;
+}
+h2, h3{
+color:darkred;
+}
+p{
+margin-top:0;
+}
+p.vignette{
+color:red
+}
+.no-dot{
+list-style-type: none;
+}
+ul.no-dot li{
+padding-left: 1rem;
+text-indent: -1rem;
+margin-bottom: 0.3rem;
+}
+audio{
+height:30px;
+}
+div.post-body{
+max-width:900px;
+margin:0 auto;
+padding:1rem;
+background-color:white;
+padding-top:2rem;
+}
+div.index-boxnbt{
+background-color:#eee;
+}
+.material-symbols-outlined {
+font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+font-size: 18px;
+line-height: 1;
+}
+.monaco {
+width: 100%;
+margin: 1.25rem 0;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.monaco-bar {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 2px;
+padding: 6px 10px;
+background: #2d2d2d;
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.monaco-bar-label {
+flex: 1;
+font-family: 'Inter', sans-serif;
+font-size: 11px;
+font-weight: 500;
+color: #6e7681;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+padding-left: 4px;
+}
+.monaco-tool {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+border-radius: 6px;
+color: #8b949e;
+cursor: pointer;
+transition: background 0.15s ease, color 0.15s ease;
+}
+.monaco-tool:hover {
+background: rgba(255, 255, 255, 0.1);
+color: #e6edf3;
+}
+.monaco-tool:active {
+background: rgba(255, 255, 255, 0.06);
+transform: scale(0.92);
+}
+.monaco-tool[data-action="run"]:hover {
+background: rgba(63, 185, 80, 0.18);
+color: #3fb950;
+}
+.editor-holder {
+background-color: #1e1e1e;
+padding: 8px 0;
+}
+.editor {
+margin: 0;
+padding: 0;
+}
+.console {
+background: #161b22;
+border-top: 1px solid rgba(255, 255, 255, 0.07);
+padding: 8px 0 6px;
+position: relative;
+min-height: 36px;
+font-family: 'Consolas', 'Cascadia Code', 'Courier New', monospace;
+font-size: 13px;
+}
+.console-line {
+color: #c9d1d9;
+padding: 2px 40px 2px 14px;
+line-height: 1.6;
+white-space: pre-wrap;
+word-break: break-all;
+}
+.console-line:first-of-type {
+margin-top: 2px;
+}
+.console-line.error {
+color: #f85149;
+background: rgba(248, 81, 73, 0.06);
+}
+span.exitButton {
+position: absolute;
+top: 6px;
+right: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 22px;
+height: 22px;
+border-radius: 4px;
+color: #6e7681;
+cursor: pointer;
+transition: background 0.15s ease, color 0.15s ease;
+}
+span.exitButton:hover {
+background: rgba(255, 255, 255, 0.1);
+color: #c9d1d9;
+}
+span.exitButton .material-symbols-outlined {
+font-size: 15px;
+}
+pre.code {
+color: #a8ff78;
+background: #0d1117;
+padding: 12px 16px;
+margin: 1.25rem 0;
+font-size: 14px;
+border-radius: 8px;
+border: 1px solid rgba(255, 255, 255, 0.07);
+overflow-x: auto;
+}
+
+--></style>
+<script>
+    const localhost = location.hostname===`127.0.0.1` || location.hostname===`localhost`
+	async function initialize(){
+
+      const kind = document.getElementById(`kind`).innerHTML
+      console.log(`kind`, kind)
+      switch(kind){
+        case `redirect`:
+          location.href=document.getElementById(`post-json`).innerText
+          return
+        case `chapter`:
+          console.log(`processing Chapter`)
+          // load any modules used in the chapter
+          for(const module of document.querySelectorAll(`div.module`)){
+            console.log(`module:`, module.innerText)
+            loadModule(module.innerText)
+    
+    
+    
+          }
+      }
+    
+    // calls the page that has our code in it
+    //const response = await fetch(`/1970/01/system.html`)
+  	//const code = await response.text()
+    
+ 
+	//const s = document.createElement('script')
+	//s.replaceChildren(code.split(`<p`+`re>`)[1].split(`</pre>`)[0])
+	//document.head.appendChild(s)
+    //console.log("got system")
+    await loadModule("system")
+	init()
+    
+    }
+    
+    async function loadModule(label){// get the first post of a specified label and load the code
+      const code = await getPage(label)
+      const s = document.createElement(`script`)
+      s.replaceChildren(code)
+      document.head.appendChild(s)          
+    }
+    
+    async function getPage(label){//get the first post with the specified label.
+        
+        if(localhost){
+          const url=`/tools/api/${label}.js`
+          const response = await fetch(url)
+          const code = await response.text()  
+          return code
+        }else{
+          const url=`${location.origin}/feeds/posts/default/-/${label}?alt=json`
+          const response = await fetch(url)
+          const page = await response.json()
+          return page.feed.entry[0].content.$t
+        }
+    }    
+
+  </script>
+<link href='https://draft.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://draft.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body onload='initialize()'>
+<div class='sitenbt' id='pagenbt'>
+<div class='site-contentnbt' id='contentnbt'>
+<div class='testing' id='item'></div>
+<div class='content-areanbt' id='primarynbt'>
+<div class='site-mainnbt' id='mainnbt' role='main'>
+<div class='section' id='mainblogsec'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+<div class='post-outer'>
+<article class='post'>
+<div id='msg-galley'></div>
+<div class='hide' id='kind'>chapter</div>
+<div class='index-boxnbt'>
+<header class='entry-header'>
+<h1 class='post-title entry-title' itemprop='headline'><span class='material-symbols-outlined menu-button' onclick='showMenu()'>menu</span><span id='title'>7. Loops and Repetition</span></h1>
+</header>
+<div id='menu'>
+<div class='menu-header'><span class='material-symbols-outlined menu-button' onclick='hideMenu()'>close</span><span id='book-title'><a href='toc.html'>PPWJS</a></span></div>
+<div id='menu-content'>
+<div id='toc'></div>
+<div id='tools'>
+                  Text Size: 
+                  <span class='material-symbols-outlined tool' onclick='fontSize(.1)'>text_increase</span>
+<span class='material-symbols-outlined tool' onclick='fontSize(-.1)'>text_decrease</span>
+<span class='material-symbols-outlined tool' onclick='fontSize()'>rotate_auto</span>
+</div>
+<div id='search-div'>
+<h6>Search Book</h6>
+<input id='search' placeholder='search book'/><span class='material-symbols-outlined tool' id='search-button'>search</span></div>
+<div id='search-results'></div>
+</div>
+</div>
+<div class='post-body entry-content' data-blog-id='6260729515379848323' data-post-id='7327378370770747178'>
+<button class='nav' id='prior-button' onclick='navigate(&#39;prior&#39;)'><span class='material-symbols-outlined'>arrow_back</span></button>
+<button class='nav' id='next-button' onclick='navigate(&#39;next&#39;)'><span class='material-symbols-outlined'>arrow_forward</span></button>
+              
+              <!--postBegin--><div class="module">monaco</div>
+<h1 data-number="7" id="loops-and-repetition"><span
+class="header-section-number">7</span> Loops and Repetition</h1>
+<h2 data-number="7.1" id="why-loops-matter"><span
+class="header-section-number">7.1</span> Why Loops Matter</h2>
+<p>When you&#8217;re working with Google Sheets, you rarely want to perform an
+action just once. More often, you want to repeat something many
+times:</p>
+<ul>
+<li>Check every value in a list</li>
+<li>Process each row in a dataset</li>
+<li>Build a new array from an existing one</li>
+<li>Apply the same rule to a whole column</li>
+</ul>
+<p>Doing this manually&#8212;one step at a time&#8212;would be slow and error&#8209;prone.
+Doing it in code without loops would be even worse, because you&#8217;d have
+to write the same line over and over again.</p>
+<p>Loops solve this problem by letting your script repeat an action
+automatically. Instead of writing the same instruction dozens or
+hundreds of times, you write it once and let the loop handle the
+repetition.</p>
+<h3 data-number="7.1.1" id="loops-let-you-work-at-scale"><span
+class="header-section-number">7.1.1</span> Loops Let You Work at
+Scale</h3>
+<p>Imagine you have an array of 500 names. Without loops, you&#8217;d need 500
+separate lines of code to process them. With loops, you can handle all
+500 with a single, compact structure.</p>
+<p>This is why loops are essential for spreadsheet automation: they let
+your script move through data the way your eyes move down a column.</p>
+<h3 data-number="7.1.2" id="loops-and-arrays-go-hand-in-hand"><span
+class="header-section-number">7.1.2</span> Loops and Arrays Go Hand in
+Hand</h3>
+<p>Loops become especially powerful when combined with arrays. Arrays
+give you a collection of values; loops give you a way to visit each
+value in turn. Together, they form the backbone of almost every
+real&#8209;world Apps Script project.</p>
+<h3 data-number="7.1.3" id="what-youll-learn-in-this-chapter"><span
+class="header-section-number">7.1.3</span> What You&#8217;ll Learn in This
+Chapter</h3>
+<p>In the sections ahead, you&#8217;ll explore:</p>
+<ul>
+<li>The basic structure of a loop</li>
+<li>How to repeat an action a specific number of times</li>
+<li>How to move through the items in an array</li>
+<li>How to stop a loop early or skip certain values</li>
+<li>How to apply loops to real spreadsheet tasks</li>
+</ul>
+<p>By the end of this chapter, you&#8217;ll be able to write scripts that
+handle entire lists, columns, and datasets with ease. Loops are one of
+the biggest leaps in programming power you&#8217;ll make &#8212; and once you
+understand them, your automations will feel dramatically more
+capable.</p>
+<h2 data-number="7.2" id="the-while-loop"><span
+class="header-section-number">7.2</span> The <code>while</code>
+Loop</h2>
+<p>A <code>while</code> loop is the simplest kind of loop in JavaScript.
+It repeats an action <strong>as long as a condition remains
+true</strong>. You can think of it as a way of saying:</p>
+<p>&#8220;Keep doing this until something changes.&#8221;</p>
+<p>This makes the <code>while</code> loop perfect for situations where
+you don&#8217;t know in advance how many times something needs to happen.
+Instead of repeating a task a fixed number of times, a
+<code>while</code> loop repeats based on a
+<strong>condition</strong>.</p>
+<h3 data-number="7.2.1" id="how-a-while-loop-works"><span
+class="header-section-number">7.2.1</span> How a <code>while</code> Loop
+Works</h3>
+<p>A <code>while</code> loop has two parts:</p>
+<ol type="1">
+<li>A <strong>condition</strong> that JavaScript checks</li>
+<li>A <strong>block of code</strong> that runs if the condition is
+true</li>
+</ol>
+<p>The structure looks like this:</p>
+<p>while (condition) {<br />
+// code that runs repeatedly<br />
+}</p>
+<p>As long as the condition evaluates to <code>true</code>, the code
+inside the braces keeps running.</p>
+<h3 data-number="7.2.2" id="a-simple-example"><span
+class="header-section-number">7.2.2</span> 7.2.2 A Simple Example</h3>
+<p>Here&#8217;s a small example that counts upward until a limit is
+reached:</p>
+<p>function incrementShorthandNotation(){<br />
+let x=0<br />
+while(x &lt; 5){<br />
+x = x + 1<br />
+console.log(x)<br />
+}<br />
+console.log(&#8220;The loop is done.&#8221;)<br />
+}</p>
+<p>This loop logs the numbers 1 through 5. Once <code>x</code> becomes
+5, the condition <code>x &lt; 5</code> becomes false, and the loop ends,
+allowing execution to proceed to the statement following the loop.
+Here&#8217;s the output:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHJawZZt24My53F3kwDeBIQ42nDQ9HwS4v_UqSwSNcyFwtL4Cr9uLVWZCaEx6HjA6ETSgGeQarAVTb2CzbhAkfZETcIlnID9IzG6CMa31maiPR6HsyawjgXFM0oj_gK91paNUfp7t5uGNqIyG3nvlVdXMb-bkaKxhmzcqxmowzI3mQjnKWezBtuz1kJTk/s1600/d1108ce2.png" /></p>
+<h3 data-number="7.2.3" id="shorthand-increment-notation"><span
+class="header-section-number">7.2.3</span> Shorthand Increment
+Notation</h3>
+<p>Because incrementing a variable&#8217;s value by one is such a common
+operation, JavaScript has a shorthand notation to accomplish it. It&#8217;s
+called the increment operator. To use it, the statement is simply the
+variable name preceded by two plus signs: ++x .</p>
+<p>Here is the prior example adjusted to the increment operator:</p>
+<p>function incrementShorthandNotation_2(){<br />
+let x=0<br />
+while(x &lt; 5){<br />
+++x<br />
+console.log(x)<br />
+}<br />
+console.log(&#8220;The loop is done.&#8221;)<br />
+}</p>
+<p>This does not change how the code executes, so the output will be the
+same as the prior example. However, the increment operator allows us to
+increase the value of the variable within a statement that uses the
+variable&#8217;s value. So, we can combine the statements that increment the
+value of the variable with the statement that logs its value to the
+console as follows:</p>
+<p>function incrementShorthandNotation_2(){<br />
+let x=0<br />
+while(x &lt; 5){<br />
+console.log(++x)<br />
+}<br />
+console.log(&#8220;The loop is done.&#8221;)<br />
+}</p>
+<p>Again, this modification will not change the output of the function
+because the &#8220;++&#8221; increments the value <em>before</em> it has been used
+in the &#8220;console.log&#8221; statement. However, it is possible to use the
+increment operator to modify a variable&#8217;s value <em>after</em> it is
+used in the statement. To accomplish this, we just put the &#8220;++&#8221; after
+the variable name as follows: x++ . When we use the operator in this
+way, it is called &#8220;post-incrementing.&#8221; Of course, using the increment
+operator before a variable is called &#8220;pre-incrementing.&#8221; If we modify
+the prior example to post-increment the variable, it will change the
+output.</p>
+<p>function incrementShorthandNotation_2(){<br />
+let x=0<br />
+while(x &lt; 5){<br />
+console.log(x++)<br />
+}<br />
+console.log(&#8220;The loop is done.&#8221;)<br />
+}</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2tUudYhDgpe-LMtDjy-htT9-41NX4q7hzJjY_mRuR5gWYjVv7rZfAAf6ApJn7WyzTsMdS0BPjORZFA8ngtK_ysDcisxFckFtGE-ywXJsje-ntouE-r8aZzHoybPpHO0TZWvRypTb3tQE-AuKNrCeQRxk2GlSQOtAvepSVNstvytbmoqEY0uWQ2q9wZuw/s1600/65148d9d.png" /></p>
+<p>Here, we see that the value of x is changed after it is displayed, so
+the logged values are 0-4 instead of 1-5.</p>
+<p>So far, we have not decreased a variable&#8217;s value. It should come as
+no surprise that it is very similar to increasing. Here&#8217;s a statement to
+reduce the value of x by one: x = x - 1 and we can use a similar
+shorthand, decrement operator ( x&#8211; or --x ) in exactly the same way as
+the increment operator. The increment and decrement operators only
+increase or decrease a variable&#8217;s value by one. If you want to change it
+by a different value, you must use the longhand form.</p>
+<h3 data-number="7.2.4" id="why-the-condition-matters"><span
+class="header-section-number">7.2.4</span> Why the Condition
+Matters</h3>
+<p>A <code>while</code> loop continues until its condition becomes
+false. That means <strong>you must make sure something inside the loop
+eventually changes the condition</strong>. If not, the loop will run
+forever, which is called an <em>infinite loop</em>.</p>
+<p>For example, this loop never ends:</p>
+<p>while (true) {<br />
+// This will run forever<br />
+}</p>
+<p>And this one never ends because <code>count</code> never changes:</p>
+<p>let count = 1</p>
+<p>while (count &lt;= 5) {<br />
+console.log(count) // count stays 1 forever<br />
+}</p>
+<p>You&#8217;ll learn more about avoiding infinite loops later in the chapter,
+but the key idea is simple: <strong>the loop must move toward a stopping
+point</strong>.</p>
+<p>Here&#8217;s a clean, focused example that does exactly what you asked:</p>
+<ul>
+<li>Read <strong>all</strong> the data from the sheet at once</li>
+<li>Store it in an <strong>array of arrays</strong></li>
+<li>Use a <strong>while loop</strong> to move across that array</li>
+<li>Log the <strong>first value</strong> of each row</li>
+<li>Use <code>let</code> for all variable declarations</li>
+</ul>
+<h2 data-number="7.3"
+id="example-using-a-while-loop-to-process-data-in-a-sheet"><span
+class="header-section-number">7.3</span> Example: Using a
+<code>while</code> Loop to Process data in a Sheet</h2>
+<p>Let&#8217;s begin by getting some data to work with. Run this code to build
+a set of data for this example to use.</p>
+<p>Note: This code will replace any data you have on the active sheet of
+your spreadsheet, so be careful.</p>
+<p>function writeDataToActiveSheet() {<br />
+data= [<br />
+[&#8216;First Name&#8217;, &#8216;Last Name&#8217;, &#8216;Birthdate&#8217;, &#8216;Death Date&#8217;,
+&#8216;Birthplace&#8217;],<br />
+[&#8216;George&#8217;, &#8216;Washington&#8217;, &#8216;February 22, 1732&#8217;, &#8216;December 14, 1799&#8217;,
+&#8216;Westmoreland County, VA&#8217;],<br />
+[&#8216;John&#8217;, &#8216;Adams&#8217;, &#8216;October 30, 1735&#8217;, &#8216;July 4, 1826&#8217;, &#8216;Quincy,
+MA&#8217;],<br />
+[&#8216;Thomas&#8217;, &#8216;Jefferson&#8217;, &#8216;April 13, 1743&#8217;, &#8216;July 4, 1826&#8217;, &#8216;Albemarle
+County, VA&#8217;],<br />
+[&#8216;Benjamin&#8217;, &#8216;Franklin&#8217;, &#8216;January 17, 1706&#8217;, &#8216;April 17, 1790&#8217;, &#8216;Boston,
+MA&#8217;],<br />
+[&#8216;Alexander&#8217;, &#8216;Hamilton&#8217;, &#8216;January 11, 1755&#8217;, &#8216;July 12, 1804&#8217;,
+&#8216;Charlestown, Nevis&#8217;],<br />
+[&#8216;James&#8217;, &#8216;Madison&#8217;, &#8216;March 16, 1751&#8217;, &#8216;June 28, 1836&#8217;, &#8216;Port Conway,
+VA&#8217;],<br />
+[&#8216;John&#8217;, &#8216;Jay&#8217;, &#8216;December 12, 1745&#8217;, &#8216;May 17, 1829&#8217;, &#8216;New York City,
+NY&#8217;],<br />
+[&#8216;Samuel&#8217;, &#8216;Adams&#8217;, &#8216;September 27, 1722&#8217;, &#8216;October 2, 1803&#8217;, &#8216;Boston,
+MA&#8217;],<br />
+[&#8216;Patrick&#8217;, &#8216;Henry&#8217;, &#8216;May 29, 1736&#8217;, &#8216;June 6, 1799&#8217;, &#8216;Studley,
+VA&#8217;],<br />
+[&#8216;George&#8217;, &#8216;Mason&#8217;, &#8216;December 11, 1725&#8217;, &#8216;October 7, 1792&#8217;, &#8216;Fairfax
+County, VA&#8217;]<br />
+]<br />
+const sheet = SpreadsheetApp.getActiveSheet()<br />
+const range = sheet.getRange(1, 1, data.length, data[0].length)<br />
+range.setValues(data)</p>
+<p>// Set the number format to plain text<br />
+//(the &#8220;@&#8221; symbol signifies plain text)<br />
+//this will make the data easier for you to read later on<br />
+sheet.getRange(&#8220;C2:D11&#8221;).setNumberFormat(&#8220;@&#8221;)<br />
+}</p>
+<p>Once you have activated a sheet with no data on it, execute the
+<code>writeDataToActiveSheet</code> function. This should give you a
+sheet that looks as follows:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJxKNMOB1Z3MT3_oO6d6sY7yrTdpqpDF7WX-6fvG0LKqI0_rVgv0oCTxWXLnD1m3DYOPD8e-FLB5YprJYMWIssTEbtLnwEn849XdzOkFfk2BkBJbAZnOGjQ3CZQ5Q8_SsaS6lhdjKQLdgguiHDsQDLv2mFnGbhmWD11or58LKtxQVPB-8tmt6FYdE75vA/s1600/61eb4adf.png" /></p>
+<p>With this data in place. We are ready to build an example to read the
+data from the sheet and log the first and last names. Let&#8217;s start with
+an empty function.</p>
+<p>function logFirstValues() {<br />
+}</p>
+<p>Now let&#8217;s add the code to pull the information out of the Google
+Sheet and into the memory of our program.</p>
+<p>function logFirstValues() {</p>
+<p>// get a reference to the active sheet of the spreadsheet<br />
+let sheet = SpreadsheetApp.getActiveSheet()</p>
+<p>// Read all rows and columns in the data range<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print all the data<br />
+console.log(&#8216;All Data:&#8217;, data)</p>
+<p>}<br />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUDT1I6IQbO06PD_4qxOfRXcOhm1GWywIS13PnYEHX2Ssc0xzMid7wivILoDZbg5YLiNGD3_-7R9Cp57Z7Mkkz4NOPTjmiBKerAYhLo8ko6TAu6_-uLRbBYvlI2yxgSi0AEj27MGhVj0DbO2nO9YgOx2T8KXeiAiwGDd3Q7j4L4yR6mJKqYan6zKOkRWU/s1600/a766976b.png" /></p>
+<p>Now, instead of printing all of the data as an array of arrays, let&#8217;s
+print each row of data separately.</p>
+<p>function logFirstValues() {</p>
+<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print each row of the data<br />
+console.log(&#8216;row&#8217;, 1, data[0])<br />
+console.log(&#8216;row&#8217;, 2, data[1])<br />
+console.log(&#8216;row&#8217;, 3, data[2])<br />
+console.log(&#8216;row&#8217;, 4, data[3])<br />
+console.log(&#8216;row&#8217;, 5, data[4])<br />
+console.log(&#8216;row&#8217;, 6, data[5])<br />
+console.log(&#8216;row&#8217;, 7, data[6])<br />
+console.log(&#8216;row&#8217;, 8, data[7])<br />
+console.log(&#8216;row&#8217;, 9, data[8])<br />
+console.log(&#8216;row&#8217;, 10, data[9])<br />
+console.log(&#8216;row&#8217;, 11, data[10])</p>
+<p>}<br />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSGBsEAKJBQRzH_OvYGFDxQ8JeFbUGGk7TKHvF5_676P0F1OkEK41uGwa2v7OLPY19fDZVzAv4Mm3r26jX2FtYYMcPyt0RUlc0-Wyt3pkCePbVPkj9Qap2waSGcPmiPEReDP_6ho-p2LvR3-msYznDHL52CNKCNZOllIzMKiQPSmGn1E7a0VIilqCnPDo/s1600/a468c47f.png" /></p>
+<p>With a table that only has one header and ten rows of data, this is
+not terrible, however, if you wanted to change this code to display the
+first name instead of the whole row, you would need to then change all
+11 rows of code. Let&#8217;s use a loop to print the data instead.</p>
+<p>The &#8220;while&#8221; loop requires a condition to control when the interpreter
+should exit the loop. For now, we&#8217;ll just use the boolean value &#8220;true&#8221;
+to control the loop. This will result in an endless loop; we&#8217;ll fix that
+later. For now, we are focusing on how to manipulate a variable to
+access a different part of the array with each iteration of the loop. To
+do this, we will create a variable, give it an initial value and change
+its value in the loop.</p>
+<p>function logFirstValues() {</p>
+<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print each row of the data<br />
+let index = 0<br />
+while(true){<br />
+console.log(&#8216;row&#8217;, index+1, data[index])<br />
+index++ // increase the value held in the index<br />
+// variable at the end of each iteration<br />
+}<br />
+}</p>
+<p>If you choose to run this example, the interpreter will print the
+data from the spreadsheet and then keep printing &#8220;row&#8221; followed by the
+increasing value of the &#8220;index&#8221; variable. For &#8220;data[index]&#8221;, it will
+display &#8220;undefined&#8221; because it is trying to access an element of the
+array that does not exist:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiofzx4p1lCBH3Z5ogrdQtcYtFBexG_K9ffwXfWNdsw8mbhPjFkisHsQeejMhMWsCUIPWt2lTJ9s0wXCXtqEOH3t3BK85DV1mtWjvFiYal8mUu7bsVArfy-dXr6JlMv6a-b9EFiZwr5xme0JUfDxS43oKGypQtIz6Xrl5rMS4YIu9tEmPy9xzYcqPRv2Ko/s1600/a541c20b.png" /></p>
+<p>To stop the code from executing, just click the &#8220;Stop&#8221; button as seen
+here:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhetjYxBsq4CPiJvofdjjfpdETb3n-EUdwVaf6eAtmGN18WypD6LzPUbuaNcJbgZtUtIkukrzHqcz68UsBAA5vg2I4WrfVlCPqd3CWptRo1wvJ6TfAovR8OI4i0dZAsz8TqkyR-1t4uc4ZpaXsFEv4Bq_xPIEv1bM2HaAjZsjbzr9ZtwYXg8x3vHduhrkE/s1600/93e97e8f.png" /><br />
+To make this loop end once it has displayed all data from the array,
+we&#8217;ll change the control condition from &#8220;true&#8221; to a condition that
+evaluates to &#8220;true&#8221; while accessing data and switches to &#8220;false&#8221; when
+there is not more data to access as seen here:</p>
+<p>function logFirstValues() {</p>
+<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print each row of the data<br />
+let index = 0<br />
+while(index &lt; data.length){<br />
+console.log(&#8216;row&#8217;, index+1, data[index])<br />
+index++<br />
+}<br />
+}</p>
+<p>Here is a partial output of from the code above:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQhDYUpx3YxxxyQXhuQcHGnfkZucPMChMeNaOIYgGXNEqokuChyphenhypheni47jQbjyY2sC_qqLEugRD1ggwHZFkcZT0P8L2X8ym5Ua3fwmmIXIi5PqBfJD6cai04RghPZSjq7_lNnoGPODU10fjrBqwvdFrvypmzO5WmLcYV57IdV_ieufYKMX341QMGou1ebFk/s1600/5541c86b.png" /><br />
+On the first iteration of the loop, the variable named &#8220;index&#8221; holds a
+value of 0 and the &#8220;data.length&#8221; evaluates to 11. So, the condition
+evaluates to true because zero is less than 11. As &#8220;index&#8221; increases
+with each iteration, the control condition remains true as &#8220;index&#8221;
+equals 1, 2, and 3&#8230;all the way to when &#8220;index&#8221; equals 10. However, once
+the value in the &#8220;index&#8221; variable equals 11, the statement is 11&lt;11,
+which is a false statement. Because the control condition has become
+false, the interpreter discontinues the loop and moves on to process any
+statements that follow the loop. In this case, there are no more
+statements to process, so the function ends.</p>
+<p>Let&#8217;s add another parameter for our loop. The &#8220;index&#8221; will be used to
+keep track of what element of the array &#8220;data&#8221; the loop is on, and the
+&#8220;numberOfRows&#8221; variable the value of the number of elements in the
+&#8220;data&#8221; variable, which correlates to the number of rows in the Sheet. As
+you&#8217;ve just seen above, &#8220;numberOfRows = data.length&#8221; will be 11.</p>
+<p>Now, if we want to change what is displayed, we need only modify one
+line of code. To make this code display just the last name and the death
+date, we can modify the code as follow:</p>
+<p>function logFirstValues() {</p>
+<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print each row of the data<br />
+let index = 0<br />
+while(index &lt; data.length){<br />
+console.log(&#8216;row&#8217;, index+1, data[index][1], data[index][3])<br />
+index++<br />
+}<br />
+}</p>
+<p>Now, instead of printing the whole array that represents each row, we
+are isolating just two values of the array, the last name and the death
+date, as seen here:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq-GEXiaAxtRooBEFeuONztgYsVTq7TEykqhVW4WG0lSLYPMZcAnxFJLUodyHUylqZe9awFbaTYW2I2iHW1niKWRD5souDy9jo0bhyOUqVkswO48-aZHdxeAAjPf0yOO9-PoOawJo15h1LvfAFc0z5WfAgD5qoQy1Gvf60MzEHDtY07OSGZlN8_xQhvo8/s1600/427976a9.png" /></p>
+<p>To conclude this example, let&#8217;s introduce one change to make the code
+more readable. In the expression &#8220;data[index][1]&#8221; we are identifying an
+element of an array that is itself an element of<br />
+an array. To improve readability, let&#8217;s add a variable at the beginning
+of the loop to hold one row&#8217;s data, then use that variable to access
+individual columns from the row as seen here:</p>
+<p>function logFirstValues() {</p>
+<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Print each row of the data<br />
+let index = 0<br />
+while(index &lt; data.length){<br />
+let values = data[index]<br />
+console.log(&#8216;row&#8217;, index+1, values[1], values[3])<br />
+index++<br />
+}<br />
+}</p>
+<p>Here, the variable named &#8220;values&#8221; holds the array of values from one
+row at a time, so the expression &#8220;values[0]&#8221; refers to the first name of
+any given row, and &#8220;values[1]&#8221; refers to the last name, etc.</p>
+<p>The While loop relies on a single condition to control how many times
+it executes its code: It examines the condition just before it begins
+each iteration. If the condition is true, it executes the code in the
+loop. To use this kind of loop to effectively process each value in an
+array, we need three bits of code:</p>
+<ul>
+<li>A variable to keep track of which element of the array are examining
+in each iteration of loop: let index = 0</li>
+<li>A statement to increment the value in the variable each time the
+code in the loop executes: index++</li>
+<li>The condition that evaluates to True as long as we have data to
+process and switches to False when we are out of data: index &lt;
+data.length</li>
+</ul>
+<p>Although there are many other approaches to designing a while loop to
+accomplish different tasks, this one is so common that there is another
+kind of loop in JavaScript that is specifically designed to work with
+these three control elements. It&#8217;s called the &#8220;For&#8221; loop</p>
+<h2 data-number="7.4" id="the-for-loop"><span
+class="header-section-number">7.4</span> The <code>for</code> Loop</h2>
+<p>Let&#8217;s begin our discussion of the For loop by examining a simplified
+version of our most recent example of the While loop:</p>
+<p>function logFirstValues() {</p>
+<p>let data = [&#8220;George&#8221;, &#8220;John&#8221;, &#8220;Thomas&#8221;, &#8220;James&#8221;, &#8220;Samuel&#8221;]</p>
+<p>let index = 0</p>
+<p>while(index &lt; data.length){<br />
+console.log(index,data[index])<br />
+index++<br />
+}</p>
+<p>}</p>
+<p>This loop iterates over the values in the &#8220;data&#8221; array and logs the
+following:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNy7zUl9b5JAxyJBF5nqEqKmMmz8NNyNKoWGHm0TEZDYpiqCPzC-A4iLjkgEUjDVSNCL9F3tgn7i7rUR1Me7jQJJYdAo5XK4Kug1sQhLPlmWRalUM0yYA7u3X_r6tvypHPyOh6tFdyWNoFJ3DCkX-EIStyK5GXzLL91YVBmPQ_P35OeqtzGzcX7XXGOY4/s1600/f512ac8a.png" /></p>
+<p>Let&#8217;s review and name the three control elements that manage the
+execution of the loop:</p>
+<ol type="1">
+<li><p><strong>The Initialization Statement:</strong> let index =
+0<br />
+This statement executes only once in this example because it precedes
+the loop entirely, so it is not a <em>part</em> of the loop.</p></li>
+<li><p><strong>The Control Condition:</strong> index &lt;
+data.length<br />
+This condition is evaluated before the first execution of the code in
+the loop&#8217;s body and is evaluated again prior to each subsequent
+execution of the loop&#8217;s body to determine if it is time to exit the
+loop</p></li>
+<li><p><strong>The Increment Statement:</strong> index++<br />
+This statement is inside the body of the loop, so it will run for each
+iteration of the loop.</p></li>
+</ol>
+<p>Let&#8217;s rewrite the example using the For loop with the minimum number
+of changes to get it working, Then we&#8217;ll adjust it to the standard
+format in which a For loop is written.</p>
+<p>function logFirstValues() {</p>
+<p>let data = [&#8220;George&#8221;, &#8220;John&#8221;, &#8220;Thomas&#8221;, &#8220;James&#8221;, &#8220;Samuel&#8221;]</p>
+<p>let index = 0</p>
+<p>for( ; index &lt; data.length; ){<br />
+console.log(index,data[index])<br />
+index++<br />
+}</p>
+<p>}</p>
+<p>All we have done here is change the keyword &#8220;while&#8221; to the keyword
+&#8220;for&#8221; and put semicolons before and after the control condition. This
+code executes exactly the same as the prior example.</p>
+<p>Because the For loop <em>requires</em> all three of the control
+structures in this example, it has a place built into its syntax to
+accept them. The added semicolons delineate the three control elements
+for the For loop as follows: initialization statement; control
+condition; increment statement , as seen here:</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1OqKb_r2zZxB-lT5SBKz1NFDOYyy5ySriWKNBQ3frJC5jbx4WrxjW4WqM1ITZef1qzYf-ax3IhzMEFJrr3u97lcPS_zCmwlqvHarBt5wNn0CuAQbcuH8NkfmmbZ_NFgV9bd8zFJ6rujrbbp5N4Zg0D1TdDQ3Glff6BFzvqdOZYnlies74cZs2P6X57Xc/s1600/96d2d8c7.png" /></p>
+<p>Here is the resulting For loop written in the standard format:</p>
+<p>function logFirstValues() {</p>
+<p>let data = [&#8220;George&#8221;, &#8220;John&#8221;, &#8220;Thomas&#8221;, &#8220;James&#8221;, &#8220;Samuel&#8221;]</p>
+<p>for(let index = 0; index &lt; data.length; index++){<br />
+console.log(index,data[index])<br />
+}<br />
+}</p>
+<p>The important point to recognize here is that making this change does
+not change the order of execution. Each of the three preceding examples
+executes exactly the same because they are logically equivalent.</p>
+<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig49ZuYFrJ8G_ij22PPkXerxv4kgmj_YFb6LaSY5QDWt0i-K99qlQaURqB3BEFFTlSZ2oP0Ujw-r3Zl8bEX7JyESy7xHYirEzYruEOE4y7uSlsShxCTSsZaBPP6PYutgM8WA7wM8CdJ_23-Ioh1sKA5A0w86p2uHKp5uXP5XGdQd6tkYB4i5_Tni2nN5o/s1600/59a163dd.png" /></p>
+<p>A reasonable student might ask, &#8220;if they are exactly the same, why do
+we need them both?&#8221; The answer is simple. All computer programming
+languages strike a balance between the complexity of the language itself
+and the simplicity of the programs that can be written using the
+language. In this case, the designers of JavaScript felt that because
+this kind of control structure was so common that it was worth adding a
+type of loop that expressly requires these three control elements and
+places them where they are reality accessible to a human reader, making
+the code easier to understand.</p>
+<p>In this example of the For loop, we are beginning a variable at
+specified value (0) and adding a value to it (1) with each iteration of
+the loop. As we begin each iteration of the loop we check the control
+condition and only continue the loop if it evaluates to True. This is
+the most common use of the for loop, to move an integer across a
+specified range. However, the control structures need not deal only with
+integers, or numbers. Here&#8217;s an example that</p>
+<p>The <code>for</code> loop is one of the most common and useful loop
+types in JavaScript. Unlike a <code>while</code> loop&#8212;which repeats
+until a condition changes&#8212;a <code>for</code> loop is ideal when you
+<strong>know exactly how many times</strong> you want something to
+repeat. This makes it perfect for working with arrays, because arrays
+always know their own length.</p>
+<p>A <code>for</code> loop gives you a clean, predictable way to move
+through each item in an array, one step at a time.</p>
+<h3 data-number="7.4.1" id="how-a-for-loop-works"><span
+class="header-section-number">7.4.1</span> How a <code>for</code> Loop
+Works</h3>
+<p>A <code>for</code> loop has three parts:</p>
+<p>function forLoopOfStrings() {</p>
+<p>for (start; condition; step) {<br />
+// code that runs each time<br />
+}<br />
+}</p>
+<ul>
+<li><strong>start</strong> &#8212; where the loop begins</li>
+<li><strong>condition</strong> &#8212; how long the loop should keep
+going</li>
+<li><strong>step</strong> &#8212; what happens after each repetition</li>
+</ul>
+<p>A simple example:</p>
+<p>function forLoopOfStrings() {</p>
+<p>for (let index = 0; index &lt; 5; index++) {<br />
+console.log(index)<br />
+}<br />
+}</p>
+<p>This logs the numbers 0 through 4.</p>
+<p>This loop simplifies the code in that it places the three parts of
+the loop&#8217;s control mechanism together where they are readily accessible
+to a human reader. However, it makes the code a bit more confusing for
+beginning programmers because the order in which these statements
+execute i</p>
+<p>In this example, notice that the &#8220;start&#8221; statement ( let index = 0;)
+is executed only once: when the interpreter begins the loop.</p>
+<h3 data-number="7.4.2"
+id="example-using-a-for-loop-to-access-data-in-an-array"><span
+class="header-section-number">7.4.2</span> Example: Using a For loop to
+access data in an array</h3>
+<p>Let&#8217;s modify this loop to display elements from an array of string
+values.</p>
+<p>function forLoopOfStrings() {</p>
+<p>let data = [&#8220;George&#8221;, &#8220;Abigail&#8221;, &#8220;Thomas&#8221;, &#8220;Martha&#8221;, &#8220;Penelope&#8221;]</p>
+<p>for (let index = 0; index &lt; 5; index++) {<br />
+console.log(index, data[index])<br />
+}<br />
+}</p>
+<p>In this example we have added an array called &#8220;data&#8221; and we are using
+the loop to log each of the values.</p>
+<h3 data-number="7.4.3"
+id="example-accessing-sheet-data-with-a-for-loop"><span
+class="header-section-number">7.4.3</span> Example: Accessing Sheet Data
+with a <code>for</code> Loop</h3>
+<p>Let&#8217;s write a <code>For</code> loop that logs the <strong>first and
+last name</strong> of each person in the dataset we used for our While
+Loop example.</p>
+<p>function logNames() {<br />
+let sheet = SpreadsheetApp.getActiveSheet()<br />
+let data = sheet.getDataRange().getValues()</p>
+<p>// Start at index 1 to skip the header row<br />
+for (let rowIndex = 1; i &lt; data.length; rowIndex++) {<br />
+let row = data[rowIndex] // the current row (an array)<br />
+let first = row[0] // first name<br />
+let last = row[1] // last name</p>
+<pre><code>console.log(first \+ &quot; &quot; \+ last)</code></pre>
+<p>}<br />
+}</p>
+<h3 data-number="7.4.4" id="how-this-works"><span
+class="header-section-number">7.4.4</span> How This Works</h3>
+<ul>
+<li><code>rowIndex = 1</code> Starting at 1 instead of 0 skips the
+header row</li>
+<li><code>rowIndex &lt; data.length</code> ensures we stop after the
+last row</li>
+<li><code>rowIndex++</code> moves to the next row each time</li>
+<li><code>row</code> becomes the current inner array</li>
+<li><code>row[0]</code> and <code>row[1]</code> give us the first and
+last names</li>
+</ul>
+<p>This pattern&#8212;looping through an array and working with each row&#8212;is
+one of the most common tasks for Apps Script in Google Sheets.</p>
+<!--postEnd-->
+              </div>
+</div>
+</article>
+</div>
+</div>
+</div></div>
+</div><!-- #main -->
+</div><!-- #primary -->
+<!--end of error vs non error block-->
+</div><!-- #content -->
+<footer class='site-footernbt' id='colophonnbt' role='contentinfo'>
+<div id='supplementarynbt'>
+<div class='footer-widgetsnbt widget-areanbt clearnbt' id='footer-widgetsnbt' role='complementary'>
+<div class='sidebarwidgetsarea no-items section' id='sidebarwidgetsarea'></div>
+</div><!-- #footer-sidebar -->
+</div><!-- #supplementary -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/344097953-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'APlU3lzC34h9al3h1_nHoDN-hASU:1775845789542';_WidgetManager._Init('//draft.blogger.com/rearrange?blogID\x3d6260729515379848323','//book1007.blogspot.com/2000/02/7.html','6260729515379848323');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6260729515379848323', 'title': 'book1007', 'url': 'https://book1007.blogspot.com/2000/02/7.html', 'canonicalUrl': 'https://book1007.blogspot.com/2000/02/7.html', 'homepageUrl': 'https://book1007.blogspot.com/', 'searchUrl': 'https://book1007.blogspot.com/search', 'canonicalHomepageUrl': 'https://book1007.blogspot.com/', 'blogspotFaviconUrl': 'https://book1007.blogspot.com/favicon.ico', 'bloggerUrl': 'https://draft.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22book1007 - RSS\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://draft.blogger.com/feeds/6260729515379848323/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/7327378370770747178/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/5ddb33369fcd32d1', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Share to X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '7327378370770747178', 'postImageThumbnailUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHJawZZt24My53F3kwDeBIQ42nDQ9HwS4v_UqSwSNcyFwtL4Cr9uLVWZCaEx6HjA6ETSgGeQarAVTb2CzbhAkfZETcIlnID9IzG6CMa31maiPR6HsyawjgXFM0oj_gK91paNUfp7t5uGNqIyG3nvlVdXMb-bkaKxhmzcqxmowzI3mQjnKWezBtuz1kJTk/s72-c/d1108ce2.png', 'postImageUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHJawZZt24My53F3kwDeBIQ42nDQ9HwS4v_UqSwSNcyFwtL4Cr9uLVWZCaEx6HjA6ETSgGeQarAVTb2CzbhAkfZETcIlnID9IzG6CMa31maiPR6HsyawjgXFM0oj_gK91paNUfp7t5uGNqIyG3nvlVdXMb-bkaKxhmzcqxmowzI3mQjnKWezBtuz1kJTk/s1600/d1108ce2.png', 'pageName': '7. Loops and Repetition', 'pageTitle': 'book1007: 7. Loops and Repetition'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '7. Loops and Repetition', 'description': 'monaco  7  Loops and Repetition \r 7.1  Why Loops Matter \r When you\u2019re working with Google Sheets, you rarely want to perform an\r action just...', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHJawZZt24My53F3kwDeBIQ42nDQ9HwS4v_UqSwSNcyFwtL4Cr9uLVWZCaEx6HjA6ETSgGeQarAVTb2CzbhAkfZETcIlnID9IzG6CMa31maiPR6HsyawjgXFM0oj_gK91paNUfp7t5uGNqIyG3nvlVdXMb-bkaKxhmzcqxmowzI3mQjnKWezBtuz1kJTk/s1600/d1108ce2.png', 'url': 'https://book1007.blogspot.com/2000/02/7.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 7327378370770747178}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'mainblogsec', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/2626028960-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+</body>
+</html>
