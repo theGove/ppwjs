@@ -1,0 +1,28 @@
+for tia 4/10
+
+----1,2,3,4,5,6,7,8,9
+* remove all written chapter numbers (sub chap too) 
+
+----1,2,3,4,5,6,7,8,9
+*add the yaml block to the top of all chapters
+
+
+
+
+----1,2,3,4,5 -started 6
+*find code blocks and add this to them ex. 
+    <pre class="code">
+    2 + 3;
+    1 + 2;
+    </pre>
+
+BUT for when for an non running/editing example do this 
+    <pre class="code" data-convert="false">
+    5 + 7
+    </pre>
+
+
+----1,2,3,4,5
+* for code stuff the = has been converted to \= we need to change this. So Copy All code blocks/examples from 
+original source and past them inside the Pre tag from above
+
