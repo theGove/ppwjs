@@ -480,7 +480,7 @@ overflow-x: auto;
     }    
 
   </script>
-<link href='https://draft.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://draft.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=8f3277f8-4767-42e2-8777-cc41c05bcb1c' rel='stylesheet'/></noscript>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=c56c0959-3135-41e4-becb-5fcfdb24fcc0' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6260729515379848323&amp;zx=c56c0959-3135-41e4-becb-5fcfdb24fcc0' rel='stylesheet'/></noscript>
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
@@ -541,9 +541,13 @@ id="arrays-hold-multiple-values-in-a-single-variable"><span
 class="header-section-number">6.1.1</span> Arrays Hold Multiple Values
 in a Single Variable</h3>
 <p>A normal variable stores one value:</p>
-<p>let city = &#8220;Denver&#8221;</p>
+<pre class="code" data-convert="false"> 
+let city = "Denver"
+</pre>
 <p>An array stores many:</p>
-<p>let cities = [&#8220;Denver&#8221;, &#8220;Chicago&#8221;, &#8220;Boston&#8221;]</p>
+<pre class="code" data-convert="false"> 
+let cities = ["Denver", "Chicago", "Boston"]
+</pre>
 <p>This ability to group related values is essential when you&#8217;re dealing
 with spreadsheet data, which naturally comes in lists.</p>
 <h3 data-number="6.1.2"
@@ -618,8 +622,10 @@ one by one.</p>
 <h3 data-number="6.2.1" id="what-an-array-looks-like"><span
 class="header-section-number">6.2.1</span> What an Array Looks Like</h3>
 <p>Arrays are created using square brackets:</p>
-<p>let colors = [&#8220;red&#8221;, &#8220;green&#8221;, &#8220;blue&#8221;]<br />
-let scores = [95, 87, 72, 100]</p>
+<pre class="code" data-convert="false">
+let colors = ["red", "green", "blue"]
+let scores = [95, 87, 72, 100]
+</pre>
 <p>Each item in the array has a position called an
 <strong>index</strong>. JavaScript starts counting at
 <strong>0</strong>, not 1:</p>
@@ -634,11 +640,17 @@ languages.</p>
 class="header-section-number">6.2.2</span> Accessing and Changing Array
 Values</h3>
 <p>You can read a value by referencing its index:</p>
-<p>let firstColor = colors[0]</p>
+<pre class="code" data-convert="false">
+let firstColor = colors[0]
+</pre>
 <p>You can also change a value:</p>
-<p>colors[1] = &#8220;yellow&#8221; // replaces &#8220;green&#8221;</p>
+<pre class="code" data-convert="false">
+colors[1] = "yellow"   // replaces "green"
+</pre>
 <p>Or add new values:</p>
-<p>colors.push(&#8220;purple&#8221;)</p>
+<pre class="code" data-convert="false">
+colors.push("purple")
+</pre>
 <p>Arrays grow as needed&#8212;you don&#8217;t have to declare their size ahead of
 time.</p>
 <h3 data-number="6.2.3" id="arrays-can-hold-any-type-of-data"><span
@@ -646,7 +658,9 @@ class="header-section-number">6.2.3</span> Arrays Can Hold Any Type of
 Data</h3>
 <p>Arrays aren&#8217;t limited to one type of value. You can mix strings,
 numbers, booleans, or even other arrays:</p>
-<p>let mixed = [&#8220;Ava&#8221;, 42, true]</p>
+<pre class="code" data-convert="false">
+let mixed = ["Ava", 42, true]
+</pre>
 <p>In practice, though, it&#8217;s best to keep arrays consistent so your code
 stays predictable.</p>
 <h3 data-number="6.2.4" id="common-mistakes-to-watch-for"><span
@@ -655,13 +669,17 @@ For</h3>
 <p><strong>Off&#8209;by&#8209;one errors</strong><br />
 Because arrays start at index 0, beginners often try to access an index
 that doesn&#8217;t exist:</p>
-<p>let items = [&#8220;a&#8221;, &#8220;b&#8221;, &#8220;c&#8221;]<br />
-items[3] // This will be undefined since there is no index 3</p>
+<pre class="code" data-convert="false">
+let items = ["a", "b", "c"]
+items[3]  // This will be undefined since there is no index 3
+</pre>
 <p><strong>Empty arrays</strong><br />
 An array with no items still exists, but accessing any index returns
 <code>undefined</code>:</p>
-<p>let empty = []<br />
-empty[0] // undefined</p>
+<pre class="code" data-convert="false">
+let empty = []
+empty[0]  // undefined
+</pre>
 <p><strong>Forgetting that arrays are ordered</strong><br />
 If order matters&#8212;like rows in a spreadsheet&#8212;be careful when adding or
 removing items.</p>
@@ -670,9 +688,11 @@ class="header-section-number">6.2.5</span> Why Arrays Matter in Apps
 Script</h3>
 <p>Arrays become essential when you start working with Google Sheets.
 For example:</p>
-<p>let sheet = SpreadsheetApp.getActiveSheet()<br />
-let range= sheet.getRange(&#8220;A1:A10&#8221;)<br />
-let values= range.getValues()</p>
+<pre class="code" data-convert="false">
+let sheet = SpreadsheetApp.getActiveSheet()
+let range= sheet.getRange("A1:A10")
+let values= range.getValues()
+</pre>
 <p><code>getValues()</code> returns an array of arrays&#8212;an array of rows,
 where each row is itself an array. You&#8217;ll explore this in detail in the
 next section, but the key idea is this:</p>
@@ -716,10 +736,16 @@ value</em></li>
 arrays</em></li>
 </ul>
 <p>Example:</p>
-<p>let sheet = SpreadsheetApp.getActiveSheet()</p>
-<p>let singleValue = sheet.getRange(&#8220;A1&#8221;).getValue() // one value</p>
-<p>// array of arrays<br />
-let manyValues = sheet.getRange(&#8220;A1:A5&#8221;).getValues()</p>
+<pre class="code" data-convert="false">
+let sheet = SpreadsheetApp.getActiveSheet()
+
+
+let singleValue = sheet.getRange("A1").getValue()  // one value
+
+
+// array of arrays
+let manyValues = sheet.getRange("A1:A5").getValues() 
+</pre>
 <p>If you log <code>manyValues</code>, you&#8217;ll see something like:</p>
 <p>[<br />
 [&#8220;Ava&#8221;],<br />
@@ -786,7 +812,9 @@ had a spreadsheet with the following data:</p>
 </tbody>
 </table>
 <p>If you were to execute this statement:</p>
-<p>let data = sheet.getRange(&#8220;A1:C3&#8221;).getValues()</p>
+<pre class="code" data-convert="false">
+let data = sheet.getRange("A1:C3").getValues()
+</pre>
 <p>you would have a variable named &#8220;data&#8221; containing an array of arrays
 that looks as follows:</p>
 <p>[<br />
@@ -796,26 +824,35 @@ that looks as follows:</p>
 ]</p>
 <p>Here is one approach to read the data from the first row into
 individual variables</p>
-<p>let data = sheet.getRange(&#8220;A1:C3&#8221;).getValues()</p>
-<p>let firstRow = data[0] // [&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815]<br />
-let firstName = firstRow[0] // &#8220;Ada&#8221;<br />
-let lastName = firstRow[1] // &#8220;Lovelace&#8221;<br />
-let age = firstRow[2] // 1815</p>
+<pre class="code" data-convert="false">
+let data = sheet.getRange("A1:C3").getValues()
+
+let firstRow = data[0]         // ["Ada", "Lovelace", 1815]
+let firstName = firstRow[0]     // "Ada"
+let lastName = firstRow[1]      // "Lovelace"
+let age = firstRow[2]           // 1815
+</pre>
 <p>In this example, we assign a variable named &#8220;firstRow&#8221; to the first
 value in the &#8220;data&#8221; array. That value is itself an array, holding the
 values Ada, Lovelace, and 1815. Then use the &#8220;firstRow&#8221; variable to
 access individual values. However, we can accomplish the same result
 without the intermediated variable (firstRow) as follows:</p>
-<p>let data = sheet.getRange(&#8220;A1:C3&#8221;).getValues()</p>
-<p>let firstName = data[0][0] // &#8220;Ada&#8221;<br />
-let lastName = data[0][1] // &#8220;Lovelace&#8221;<br />
-let age = data[0][2] // 1815</p>
+<pre class="code" data-convert="false">
+let data = sheet.getRange("A1:C3").getValues()
+
+let firstName = data[0][0]    // "Ada"
+let lastName = data[0][1]     // "Lovelace"
+let age = data[0][2]          // 1815
+</pre>
 <p>Similarly, you can pull out a single column by accessing the first
 element of each inner array:</p>
-<p>let data = sheet.getRange(&#8220;A1:A3&#8221;).getValues()</p>
-<p>let first = data[0][0] // Ada<br />
-let second = data[1][0] // Charles<br />
-let third = data[2][0] // Mary</p>
+<pre class="code" data-convert="false">
+let data = sheet.getRange("A1:A3").getValues()
+
+let first = data[0][0]     // Ada
+let second = data[1][0]    // Charles
+let third = data[2][0]     // Mary
+</pre>
 <p>You&#8217;re simply navigating the structure&#8212;outer array first, then inner
 array.</p>
 <h3 data-number="6.3.4" id="why-this-matters"><span
@@ -856,11 +893,14 @@ Inner Array)</h3>
 For example, using the row:</p>
 <p>[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815]</p>
 <p>You can write it like this:</p>
-<p>function writeOneRow() {<br />
-let sheet = SpreadsheetApp.getActiveSheet()<br />
-let row = [&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815]</p>
-<p>sheet.getRange(&#8220;A1:C1&#8221;).setValues([row])<br />
-}</p>
+<pre class="code" data-convert="false">
+function writeOneRow() {
+  let sheet = SpreadsheetApp.getActiveSheet()
+  let row = ["Ada", "Lovelace", 1815]
+
+  sheet.getRange("A1:C1").setValues([row])
+}
+</pre>
 <p>Notice that <code>setValues()</code> expects an <strong>array of
 arrays</strong>, even if you&#8217;re only writing one row. That&#8217;s why we wrap
 <code>row</code> in another pair of brackets.</p>
@@ -877,15 +917,19 @@ Array of Arrays)</h3>
 <p>This structure is already perfect for <code>setValues()</code>. Each
 inner array is a row, and the outer array contains all the rows.</p>
 <p>To write all three rows into the sheet:</p>
-<p>function writeManyRows() {<br />
-let sheet = SpreadsheetApp.getActiveSheet()</p>
-<p>let data = [<br />
-[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815],<br />
-[&#8220;Charles&#8221;, &#8220;Babbage&#8221;, 1791],<br />
-[&#8220;Mary&#8221;, &#8220;Sommerville&#8221;, 1780]<br />
-]</p>
-<p>sheet.getRange(&#8220;A1:C3&#8221;).setValues(data)<br />
-}</p>
+<pre class="code" data-convert="false">
+function writeManyRows() {
+  let sheet = SpreadsheetApp.getActiveSheet()
+
+  let data = [
+    ["Ada", "Lovelace", 1815],
+    ["Charles", "Babbage", 1791],
+    ["Mary", "Sommerville", 1780]
+  ]
+
+  sheet.getRange("A1:C3").setValues(data)
+}
+</pre>
 <p>As long as the range size matches the array size (3 rows &#215; 3
 columns), Apps Script writes everything in one step.</p>
 <h3 data-number="6.4.3" id="why-this-matters-1"><span
@@ -932,9 +976,9 @@ automation.</p>
 
 <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/344097953-widgets.js"></script>
 <script type='text/javascript'>
-window['__wavt'] = 'APlU3lwtVq0m9rkf4yWrk6p9TLO5:1775845788586';_WidgetManager._Init('//draft.blogger.com/rearrange?blogID\x3d6260729515379848323','//book1007.blogspot.com/2000/02/6.html','6260729515379848323');
-_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6260729515379848323', 'title': 'book1007', 'url': 'https://book1007.blogspot.com/2000/02/6.html', 'canonicalUrl': 'https://book1007.blogspot.com/2000/02/6.html', 'homepageUrl': 'https://book1007.blogspot.com/', 'searchUrl': 'https://book1007.blogspot.com/search', 'canonicalHomepageUrl': 'https://book1007.blogspot.com/', 'blogspotFaviconUrl': 'https://book1007.blogspot.com/favicon.ico', 'bloggerUrl': 'https://draft.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22book1007 - RSS\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://draft.blogger.com/feeds/6260729515379848323/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/5832100277186728031/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/5ddb33369fcd32d1', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Share to X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '5832100277186728031', 'pageName': '6. Arrays', 'pageTitle': 'book1007: 6. Arrays'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '6. Arrays', 'description': 'monaco  6  Arrays \r 6.1  Why Arrays Matter in Apps\r Script \r When you start automating Google Sheets with Apps Script, you quickly\r discover...', 'url': 'https://book1007.blogspot.com/2000/02/6.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 5832100277186728031}}]);
-_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'mainblogsec', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/2626028960-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+window['__wavt'] = 'APlU3lwE_eJZ466-TsTe-8O0NRFZ:1777040616030';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d6260729515379848323','//book1007.blogspot.com/2000/02/6.html','6260729515379848323');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6260729515379848323', 'title': 'book1007', 'url': 'https://book1007.blogspot.com/2000/02/6.html', 'canonicalUrl': 'https://book1007.blogspot.com/2000/02/6.html', 'homepageUrl': 'https://book1007.blogspot.com/', 'searchUrl': 'https://book1007.blogspot.com/search', 'canonicalHomepageUrl': 'https://book1007.blogspot.com/', 'blogspotFaviconUrl': 'https://book1007.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22book1007 - RSS\x22 href\x3d\x22https://book1007.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/6260729515379848323/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22book1007 - Atom\x22 href\x3d\x22https://book1007.blogspot.com/feeds/5832100277186728031/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/1d38d69c812f94fa', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Share to X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '5832100277186728031', 'pageName': '6. Arrays', 'pageTitle': 'book1007: 6. Arrays'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '6. Arrays', 'description': 'monaco  6  Arrays \r 6.1  Why Arrays Matter in Apps\r Script \r When you start automating Google Sheets with Apps Script, you quickly\r discover...', 'url': 'https://book1007.blogspot.com/2000/02/6.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 5832100277186728031}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'mainblogsec', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1827932055-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
 </script>
 </body>
 </html>
