@@ -528,70 +528,136 @@ class="header-section-number">2</span> Your First Lines of Code</h1>
 class="header-section-number">2.1</span> Writing and Running Simple
 Statements</h2>
 <p>Before you can build programs that make decisions, loop through data,
-or interact with the world, you need to get comfortable with the
-smallest building block of all: the <strong>statement</strong>. A
-statement is a single instruction that tells the computer to do
-something. It might display a message, perform a calculation, or store a
-piece of information. Think of statements as the individual sentences in
-the language of programming.</p>
+or interact with the world, you need to get comfortable with one of the
+most fundamental building blocks of all: the
+<strong>expression</strong>. An expression is any piece of code that the
+computer evaluates to produce a specific value. It might be a simple
+number, a piece of text, or a complex calculation. Think of expressions
+as the meaningful phrases or ingredients that provide the “data” for
+your code.</p>
+<p>In JavaScript, expressions are everywhere:</p>
+<ul>
+<li><p>A simple number like <code>25</code> is an expression.</p></li>
+<li><p>A calculation like <code>5 + 7</code> is an expression that
+evaluates to <code>12</code>.</p></li>
+<li><p>A piece of text in quotes, like <code>"Hello, world!"</code>, is
+an expression.</p></li>
+</ul>
+<p>While expressions represent values, they need to be wrapped into
+<strong>statements</strong>—the full “sentences” or instructions that
+tell the computer to take an action with those values.</p>
+<h3 data-number="2.1.1" id="from-value-to-action"><span
+class="header-section-number">2.1.1</span> From Value to Action</h3>
+<p>An expression on its own is like a thought that hasn’t been spoken
+aloud. For example, the text <code>"Hello, world!"</code> is an
+expression; it represents a specific piece of data. However, just
+writing that text doesn’t tell the computer what to do with it.</p>
+<p>To make it an instruction, you use a statement like
+<code>console.log()</code>.</p>
+<p>In this line, <code>"Hello, world!"</code> is the
+<strong>expression</strong> (the value), and the entire line is the
+<strong>statement</strong> (the instruction to print that value). The
+statement takes the “ingredient” and carries out a clear command.</p>
 <p>In JavaScript, a simple statement might look like this:</p>
 <pre class="code">
-console.log("Hello, world!")
+console.log("Hello, world!") //this is a statement
+//“Hello, world!”  is just the expression
 </pre>
 <p>This line tells the computer to print a message. That’s it. One
 instruction, one action. But this tiny example captures the essence of
 programming: you write a clear command, and the computer carries it out
 exactly.</p>
-<h3 data-number="2.1.1" id="what-makes-a-statement-simple"><span
-class="header-section-number">2.1.1</span> What Makes a Statement
+<h3 data-number="2.1.2" id="what-makes-a-statement-simple"><span
+class="header-section-number">2.1.2</span> What Makes a Statement
 “Simple”</h3>
 <p>A simple statement usually does one thing:</p>
 <ul>
 <li>Display a value</li>
-<li>Perform a calculation</li>
 <li>Assign a variable</li>
 <li>Call a function</li>
 </ul>
 <p>For example:</p>
-<pre class="code" data-convert="false">
-5 + 7
+<pre class="code">
+console.log(5 + 7) // “5+7” is the expression
+                   // “console.log()” is added around it to 
+                         //turn it into a statement that displays the sum of 5+7
 </pre>
 <p>This calculates a number, though it doesn’t show the result anywhere.
 Or:</p>
-<p>let name = "Ava"</p>
+<pre class="code" >
+let name = "Ava"
+</pre>
 <p>This stores a piece of information for later use. Each of these lines
 is a complete thought, expressed in code.</p>
-<h3 data-number="2.1.2" id="running-your-first-statements"><span
-class="header-section-number">2.1.2</span> Running Your First
+<h3 data-number="2.1.3" id="running-your-first-statements"><span
+class="header-section-number">2.1.3</span> Running Your First
 Statements</h3>
 <p>You can run simple statements in several environments, but the
 easiest place to start is the <strong>browser console</strong>. Open
-your browser’s developer tools, switch to the Console tab, and type:</p>
+your browser’s developer tools, switch to the Console tab, and
+type:&lt;-(Note: the console in browser will echo expressions back to
+you, so sometimes you can see an expression.)</p>
+<p>Run these code blocks below, the first two won’t show anything
+because they are both just expressions. But you can turn them into
+statements by wrapping them in console.log()</p>
 <pre class="code">
-2 + 3;
-1 + 2;
+2 + 3
 </pre>
-<p>Press Enter, and the console will show the result. Try a few
-more:</p>
 <pre class="code">
 "JavaScript is fun!"
-
+</pre>
+<p>This is a true, simple statement:</p>
+<pre class="code">
 console.log(10 * 10)
-
+</pre>
+<pre class="code">
 let x = 42
 x
 </pre>
+<p>Line one is a simple statement, it is telling the computer to assign
+the value 42 to the variable x, but line two is just an expression of
+the variable x. When the computer processes that line it can tell that x
+is 42, but the computer doesn’t know what to do with the
+information.</p>
+<p>You can tell the computer what to do with the expression by turning
+line 2 into a statement.</p>
 <pre class="code">
-console.log(10 * 10)
-</pre>
-<pre class="code">
-let x = 42  
-x
+let x = 42
+console.log(x)
 </pre>
 <p>Each statement runs immediately, giving you instant feedback. This
 rapid loop—write, run, observe—is one of the best ways to learn.</p>
-<h3 data-number="2.1.3" id="why-simple-statements-matter"><span
-class="header-section-number">2.1.3</span> Why Simple Statements
+<h3 data-number="2.1.4" id="ending-statements"><span
+class="header-section-number">2.1.4</span> Ending Statements</h3>
+<p>Most JavaScript statements end with a semicolon. Technically,
+JavaScript can often figure out where a statement ends even if you leave
+the semicolon out, but using them consistently makes your code clearer
+and avoids subtle bugs. Think of semicolons as punctuation that helps
+the computer read your instructions cleanly.</p>
+<p>If you look at JavaScript code online, you will often see a semicolon
+(<code>;</code>) at the end of every line. In this book, however, we
+will <strong>not</strong> be using them.</p>
+<p>Modern JavaScript has a feature called <strong>Automatic Semicolon
+Insertion</strong>. This means the computer is smart enough to see your
+line breaks and understand where one instruction ends, and the next
+begins without needing a piece of punctuation to tell it so.</p>
+<p>We are skipping semicolons for two main reasons:</p>
+<ul>
+<li><strong>Reducing Mental Strain</strong>: Learning to program
+involves keeping track of many new rules. Forcing yourself to remember a
+semicolon at the end of every line adds an extra layer of “mental
+overhead” that doesn’t actually help you learn the logic of the
+code.</li>
+<li><strong>Cleaner Look</strong>: Many modern developers prefer the
+clean, minimalist look of code without semicolons. It allows you to
+focus on the action—the words and symbols—rather than the
+punctuation.</li>
+</ul>
+<p>While you may eventually work on projects where semicolons are the
+established norm, for your journey through this book, we will keep
+things simple and focus on the instructions themselves.</p>
+<h3 data-number="2.1.5" id="why-simple-statements-matter"><span
+class="header-section-number">2.1.5</span> Why Simple Statements
 Matter</h3>
 <p>It’s tempting to rush ahead to bigger, more exciting programs, but
 mastering simple statements is essential. They’re the foundation for
