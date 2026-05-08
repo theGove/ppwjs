@@ -522,438 +522,870 @@ overflow-x: auto;
 <button class='nav' id='next-button' onclick='navigate(&#39;next&#39;)'><span class='material-symbols-outlined'>arrow_forward</span></button>
               
               <!--postBegin--><div class="module">monaco</div>
-<h1 data-number="6" id="arrays"><span
-class="header-section-number">6</span> Arrays</h1>
-<h2 data-number="6.1" id="why-arrays-matter-in-apps-script"><span
-class="header-section-number">6.1</span> Why Arrays Matter in Apps
-Script</h2>
-<p>When you start automating Google Sheets with Apps Script, you quickly
-discover that working with <strong>one value at a time</strong> isn&#8217;t
-enough. Spreadsheets are built around <strong>lists</strong>,
-<strong>columns</strong>, and <strong>tables</strong>&#8212;all collections of
-values. To handle that kind of data, you need a structure that can hold
-many items at once. That&#8217;s exactly what arrays are designed for.</p>
-<p>Arrays let your scripts read, process, and transform groups of values
-efficiently. They&#8217;re the backbone of almost every meaningful spreadsheet
-automation you&#8217;ll write.</p>
-<h3 data-number="6.1.1"
-id="arrays-hold-multiple-values-in-a-single-variable"><span
-class="header-section-number">6.1.1</span> Arrays Hold Multiple Values
-in a Single Variable</h3>
-<p>A normal variable stores one value:</p>
-<pre class="code" data-convert="false"> 
-let city = "Denver"
-</pre>
-<p>An array stores many:</p>
-<pre class="code" data-convert="false"> 
-let cities = ["Denver", "Chicago", "Boston"]
-</pre>
-<p>This ability to group related values is essential when you&#8217;re dealing
-with spreadsheet data, which naturally comes in lists.</p>
-<h3 data-number="6.1.2"
-id="arrays-are-how-google-sheets-returns-ranges"><span
-class="header-section-number">6.1.2</span> Arrays Are How Google Sheets
-Returns Ranges</h3>
-<p>When you read a single cell, you get a single value. But when you
-read <strong>multiple cells</strong>, Apps Script returns an
-<strong>array of arrays</strong>:</p>
-<ul>
-<li>Each <strong>inner array</strong> represents a row</li>
-<li>The <strong>outer array</strong> contains all the rows you
-requested</li>
-</ul>
-<p>This structure mirrors the shape of the spreadsheet, but in
-JavaScript form. Once you understand arrays of arrays, you can process
-entire ranges at once instead of working cell by cell.</p>
-<h3 data-number="6.1.3"
-id="arrays-make-your-scripts-faster-and-cleaner"><span
-class="header-section-number">6.1.3</span> Arrays Make Your Scripts
-Faster and Cleaner</h3>
-<p>Apps Script is at its best when you:</p>
-<ul>
-<li>Read a whole range into an array</li>
-<li>Process the data in memory</li>
-<li>Write the results back in one step</li>
-</ul>
-<p>This approach is dramatically faster than touching the spreadsheet
-repeatedly. Arrays make that possible.</p>
-<h3 data-number="6.1.4"
-id="arrays-help-you-think-in-terms-of-data-not-cells"><span
-class="header-section-number">6.1.4</span> Arrays Help You Think in
-Terms of Data, Not Cells</h3>
-<p>Once you start using arrays, your mental model shifts:</p>
-<ul>
-<li>Instead of &#8220;read A2,&#8221; you think &#8220;get the second item in the
-list.&#8221;</li>
-<li>Instead of &#8220;look at each cell in column B,&#8221; you think &#8220;consider each
-row and look at index 1.&#8221;</li>
-<li>Instead of &#8220;write to row 10,&#8221; you think &#8220;update the tenth array
-element.&#8221;</li>
-</ul>
-<p>This mindset is how real applications handle data&#8212;by working with
-collections rather than isolated pieces.</p>
-<h3 data-number="6.1.5" id="what-youll-learn-in-this-chapter"><span
-class="header-section-number">6.1.5</span> What You&#8217;ll Learn in This
-Chapter</h3>
-<p>In the sections ahead, you&#8217;ll explore:</p>
-<ul>
-<li>How to create and use arrays</li>
-<li>How to work with arrays of arrays returned by Google Sheets</li>
-<li>Useful array methods for transforming data</li>
-<li>How to write arrays back into the sheet</li>
-<li>Real&#8209;world examples that turn raw spreadsheet ranges into meaningful
-results</li>
-</ul>
-<p>By the end of this chapter, arrays will feel natural and
-intuitive&#8212;and you&#8217;ll be ready to build scripts that handle real&#8209;world
-data with confidence and speed.</p>
-<h2 data-number="6.2" id="understanding-arrays"><span
-class="header-section-number">6.2</span> Understanding Arrays</h2>
-<p>Arrays are one of the most important data structures you&#8217;ll use in
-JavaScript and Google Apps Script. If variables let you store a single
-value, arrays let you store <strong>many values in a single
-place</strong>&#8212;a list, a sequence, a collection. This becomes essential
-when you start working with spreadsheet data, because Sheets almost
-always gives you information in groups: rows, columns, or entire
-tables.</p>
-<p>Think of an array as a row of labeled boxes, each holding a value.
-You can look inside any box, change what&#8217;s in it, or look at all of them
-one by one.</p>
-<h3 data-number="6.2.1" id="what-an-array-looks-like"><span
-class="header-section-number">6.2.1</span> What an Array Looks Like</h3>
-<p>Arrays are created using square brackets:</p>
-<pre class="code" data-convert="false">
-let colors = ["red", "green", "blue"]
-let scores = [95, 87, 72, 100]
-</pre>
-<p>Each item in the array has a position called an
-<strong>index</strong>. JavaScript starts counting at
-<strong>0</strong>, not 1:</p>
-<ul>
-<li><code>colors[0]</code> &#8594; <code>"red"</code></li>
-<li><code>colors[1]</code> &#8594; <code>"green"</code></li>
-<li><code>colors[2]</code> &#8594; <code>"blue"</code></li>
-</ul>
-<p>This &#8220;zero&#8209;based indexing&#8221; is standard in most programming
-languages.</p>
-<h3 data-number="6.2.2" id="accessing-and-changing-array-values"><span
-class="header-section-number">6.2.2</span> Accessing and Changing Array
-Values</h3>
-<p>You can read a value by referencing its index:</p>
-<pre class="code" data-convert="false">
-let firstColor = colors[0]
-</pre>
-<p>You can also change a value:</p>
-<pre class="code" data-convert="false">
-colors[1] = "yellow"   // replaces "green"
-</pre>
-<p>Or add new values:</p>
-<pre class="code" data-convert="false">
-colors.push("purple")
-</pre>
-<p>Arrays grow as needed&#8212;you don&#8217;t have to declare their size ahead of
-time.</p>
-<h3 data-number="6.2.3" id="arrays-can-hold-any-type-of-data"><span
-class="header-section-number">6.2.3</span> Arrays Can Hold Any Type of
-Data</h3>
-<p>Arrays aren&#8217;t limited to one type of value. You can mix strings,
-numbers, booleans, or even other arrays:</p>
-<pre class="code" data-convert="false">
-let mixed = ["Ava", 42, true]
-</pre>
-<p>In practice, though, it&#8217;s best to keep arrays consistent so your code
-stays predictable.</p>
-<h3 data-number="6.2.4" id="common-mistakes-to-watch-for"><span
-class="header-section-number">6.2.4</span> Common Mistakes to Watch
-For</h3>
-<p><strong>Off&#8209;by&#8209;one errors</strong><br />
-Because arrays start at index 0, beginners often try to access an index
-that doesn&#8217;t exist:</p>
-<pre class="code" data-convert="false">
-let items = ["a", "b", "c"]
-items[3]  // This will be undefined since there is no index 3
-</pre>
-<p><strong>Empty arrays</strong><br />
-An array with no items still exists, but accessing any index returns
-<code>undefined</code>:</p>
-<pre class="code" data-convert="false">
-let empty = []
-empty[0]  // undefined
-</pre>
-<p><strong>Forgetting that arrays are ordered</strong><br />
-If order matters&#8212;like rows in a spreadsheet&#8212;be careful when adding or
-removing items.</p>
-<h3 data-number="6.2.5" id="why-arrays-matter-in-apps-script-1"><span
-class="header-section-number">6.2.5</span> Why Arrays Matter in Apps
-Script</h3>
-<p>Arrays become essential when you start working with Google Sheets.
-For example:</p>
-<pre class="code" data-convert="false">
-let sheet = SpreadsheetApp.getActiveSheet()
-let range= sheet.getRange("A1:A10")
-let values= range.getValues()
-</pre>
-<p><code>getValues()</code> returns an array of arrays&#8212;an array of rows,
-where each row is itself an array. You&#8217;ll explore this in detail in the
-next section, but the key idea is this:</p>
-<p><strong>Arrays are how Apps Script represents spreadsheet
-data.</strong></p>
-<p>If you want to process multiple rows, clean up a column, or generate
-new output, you&#8217;ll be working with arrays.</p>
-<h3 data-number="6.2.6" id="what-you-can-do-with-arrays"><span
-class="header-section-number">6.2.6</span> What You Can Do With
-Arrays</h3>
-<p>By the end of this chapter, arrays will feel like second nature.
-You&#8217;ll use them to:</p>
-<ul>
-<li>Read data from a sheet into an array</li>
-<li>Transform values before writing them back</li>
-<li>Build new lists from existing ones</li>
-<li>Represent entire tables in memory</li>
-</ul>
-<p>Arrays are the gateway to handling real&#8209;world data at scale. Once
-you&#8217;re comfortable with them, you&#8217;ll be ready to tackle the arrays of
-arrays that Google Sheets gives you&#8212;and that&#8217;s where your Apps Script
-skills really start to shine.</p>
-<h2 data-number="6.3" id="arrays-and-google-sheets"><span
-class="header-section-number">6.3</span> Arrays and Google Sheets</h2>
-<p>Arrays become truly useful once you start working with data from
-Google Sheets. Almost everything you read from a sheet&#8212;whether it&#8217;s a
-column, a row, or a whole table&#8212;comes back as an <strong>array</strong>.
-And when you read more than one cell at a time, Apps Script gives you an
-<strong>array of arrays</strong>, where each inner array represents a
-single row of data.</p>
-<p>Understanding this structure is the key to writing fast, efficient
-spreadsheet automations.</p>
-<h3 data-number="6.3.1" id="getvalue-vs.-getvalues"><span
-class="header-section-number">6.3.1</span> <code>getValue()</code>
-vs.&#160;<code>getValues()</code></h3>
-<p>These two methods behave very differently:</p>
-<ul>
-<li><strong><code>getValue()</code></strong> returns a <em>single
-value</em></li>
-<li><strong><code>getValues()</code></strong> returns an <em>array of
-arrays</em></li>
-</ul>
-<p>Example:</p>
-<pre class="code" data-convert="false">
-let sheet = SpreadsheetApp.getActiveSheet()
-
-
-let singleValue = sheet.getRange("A1").getValue()  // one value
-
-
-// array of arrays
-let manyValues = sheet.getRange("A1:A5").getValues() 
-</pre>
-<p>If you log <code>manyValues</code>, you&#8217;ll see something like:</p>
-<p>[<br />
-[&#8220;Ava&#8221;],<br />
-[&#8220;Jordan&#8221;],<br />
-[&#8220;Mia&#8221;],<br />
-[&#8220;Sam&#8221;],<br />
-[&#8220;Leo&#8221;]<br />
-]</p>
-<p>Each inner array represents one row from the range.</p>
-<h3 data-number="6.3.2" id="thinking-in-rows-and-columns"><span
-class="header-section-number">6.3.2</span> Thinking in Rows and
-Columns</h3>
-<p>When you read a range like <code>"A1:C1"</code>, you get <strong>one
-row</strong>, represented as an array:</p>
-<p>[&#8220;Ava&#8221;, &#8220;Smith&#8221;, 28]</p>
-<p>When you read <code>"A1:C3"</code>, you get <strong>three
-rows</strong>, represented as an array of arrays:</p>
-<p>[<br />
-[&#8220;Ava&#8221;, &#8220;Smith&#8221;, 28],<br />
-[&#8220;Jordan&#8221;, &#8220;Lee&#8221;, 31],<br />
-[&#8220;Mia&#8221;, &#8220;Chen&#8221;, 25]<br />
-]</p>
-<p>This structure mirrors the spreadsheet:</p>
-<ul>
-<li>Outer array &#8594; all rows</li>
-<li>Inner arrays &#8594; each row</li>
-<li>Items inside inner arrays &#8594; each cell in that row</li>
-</ul>
-<p>Once you see the pattern, it becomes intuitive.</p>
-<h3 data-number="6.3.3" id="extracting-values"><span
-class="header-section-number">6.3.3</span> Extracting Values</h3>
-<p>In the next chapter, we&#8217;ll see how to use something called a &#8220;loop&#8221;
-to extract values from an array in an elegant way, but for now, let&#8217;s
-see how to refer to individual values in an array of arrays. Suppose you
-had a spreadsheet with the following data:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"></th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">1</td>
-<td>Ada</td>
-<td>Lovelace</td>
-<td>1815</td>
-</tr>
-<tr>
-<td style="text-align: left;">2</td>
-<td>Charles</td>
-<td>Babbage</td>
-<td>1791</td>
-</tr>
-<tr>
-<td style="text-align: left;">3</td>
-<td>Mary</td>
-<td>Sommerville</td>
-<td>1780</td>
-</tr>
-</tbody>
-</table>
-<p>If you were to execute this statement:</p>
-<pre class="code" data-convert="false">
-let data = sheet.getRange("A1:C3").getValues()
-</pre>
-<p>you would have a variable named &#8220;data&#8221; containing an array of arrays
-that looks as follows:</p>
-<p>[<br />
-[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815],<br />
-[&#8220;Charles&#8221;, &#8220;Babbage&#8221;, 1791],<br />
-[&#8220;Mary&#8221;, &#8220;Sommerville&#8221;, 1780]<br />
-]</p>
-<p>Here is one approach to read the data from the first row into
-individual variables</p>
-<pre class="code" data-convert="false">
-let data = sheet.getRange("A1:C3").getValues()
-
-let firstRow = data[0]         // ["Ada", "Lovelace", 1815]
-let firstName = firstRow[0]     // "Ada"
-let lastName = firstRow[1]      // "Lovelace"
-let age = firstRow[2]           // 1815
-</pre>
-<p>In this example, we assign a variable named &#8220;firstRow&#8221; to the first
-value in the &#8220;data&#8221; array. That value is itself an array, holding the
-values Ada, Lovelace, and 1815. Then use the &#8220;firstRow&#8221; variable to
-access individual values. However, we can accomplish the same result
-without the intermediated variable (firstRow) as follows:</p>
-<pre class="code" data-convert="false">
-let data = sheet.getRange("A1:C3").getValues()
-
-let firstName = data[0][0]    // "Ada"
-let lastName = data[0][1]     // "Lovelace"
-let age = data[0][2]          // 1815
-</pre>
-<p>Similarly, you can pull out a single column by accessing the first
-element of each inner array:</p>
-<pre class="code" data-convert="false">
-let data = sheet.getRange("A1:A3").getValues()
-
-let first = data[0][0]     // Ada
-let second = data[1][0]    // Charles
-let third = data[2][0]     // Mary
-</pre>
-<p>You&#8217;re simply navigating the structure&#8212;outer array first, then inner
-array.</p>
-<h3 data-number="6.3.4" id="why-this-matters"><span
-class="header-section-number">6.3.4</span> Why This Matters</h3>
-<p>Arrays are the format Google Sheets uses to give you data. Once you
-understand how to read and access values inside arrays of arrays, you
-can:</p>
-<ul>
-<li>Work with entire ranges at once</li>
-<li>Extract specific rows or columns</li>
-<li>Prepare data for later transformation</li>
-<li>Build scripts that handle more than one cell at a time</li>
-</ul>
-<p>This sets the stage for everything that comes next. Soon you&#8217;ll learn
-how to transform these arrays, reshape them, and prepare them for
-writing back into the sheet.</p>
-<h2 data-number="6.4" id="writing-arrays-back-to-the-worksheet"><span
-class="header-section-number">6.4</span> Writing Arrays Back to the
-Worksheet</h2>
-<p>Now that you&#8217;ve seen how Google Sheets gives you data as arrays (and
-arrays of arrays), the next step is learning how to
-<strong>write</strong> data back into the sheet. This is where arrays
-become truly powerful: you can prepare all your data in memory and then
-write it to the spreadsheet in a single, efficient operation.</p>
-<p>Apps Script provides two main methods for writing values:</p>
-<ul>
-<li><strong><code>setValue()</code></strong> &#8212; writes a <em>single</em>
-value</li>
-<li><strong><code>setValues()</code></strong> &#8212; writes an <em>array of
-arrays</em></li>
-</ul>
-<p>Since this chapter focuses on arrays, we&#8217;ll work with
-<code>setValues()</code>.</p>
-<h3 data-number="6.4.1" id="writing-a-single-row-one-inner-array"><span
-class="header-section-number">6.4.1</span> Writing a Single Row (One
-Inner Array)</h3>
-<p>If you want to write one row of data, you pass a single inner array.
-For example, using the row:</p>
-<p>[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815]</p>
-<p>You can write it like this:</p>
-<pre class="code" data-convert="false">
-function writeOneRow() {
-  let sheet = SpreadsheetApp.getActiveSheet()
-  let row = ["Ada", "Lovelace", 1815]
-
-  sheet.getRange("A1:C1").setValues([row])
-}
-</pre>
-<p>Notice that <code>setValues()</code> expects an <strong>array of
-arrays</strong>, even if you&#8217;re only writing one row. That&#8217;s why we wrap
-<code>row</code> in another pair of brackets.</p>
-<h3 data-number="6.4.2"
-id="writing-multiple-rows-an-array-of-arrays"><span
-class="header-section-number">6.4.2</span> Writing Multiple Rows (An
-Array of Arrays)</h3>
-<p>Here&#8217;s the full dataset as an array of arrays:</p>
-<p>[<br />
-[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815],<br />
-[&#8220;Charles&#8221;, &#8220;Babbage&#8221;, 1791],<br />
-[&#8220;Mary&#8221;, &#8220;Sommerville&#8221;, 1780]<br />
-]</p>
-<p>This structure is already perfect for <code>setValues()</code>. Each
-inner array is a row, and the outer array contains all the rows.</p>
-<p>To write all three rows into the sheet:</p>
-<pre class="code" data-convert="false">
-function writeManyRows() {
-  let sheet = SpreadsheetApp.getActiveSheet()
-
-  let data = [
-    ["Ada", "Lovelace", 1815],
-    ["Charles", "Babbage", 1791],
-    ["Mary", "Sommerville", 1780]
-  ]
-
-  sheet.getRange("A1:C3").setValues(data)
-}
-</pre>
-<p>As long as the range size matches the array size (3 rows &#215; 3
-columns), Apps Script writes everything in one step.</p>
-<h3 data-number="6.4.3" id="why-this-matters-1"><span
-class="header-section-number">6.4.3</span> Why This Matters</h3>
-<p>Writing data with <code>setValues()</code> is:</p>
-<ul>
-<li><strong>Fast</strong> &#8212; one operation instead of many</li>
-<li><strong>Clean</strong> &#8212; your script stays simple and readable</li>
-<li><strong>Reliable</strong> &#8212; the structure of your array matches the
-structure of the sheet</li>
-</ul>
-<p>This is the preferred way to write any non&#8209;trivial amount of data
-back into Google Sheets.</p>
-<h3 data-number="6.4.4" id="a-helpful-pattern-to-remember"><span
-class="header-section-number">6.4.4</span> A Helpful Pattern to
-Remember</h3>
-<p>Whenever you want to write data:</p>
-<ol type="1">
-<li>Build an <strong>array of arrays</strong> in memory</li>
-<li>Select a range with the same dimensions</li>
-<li>Call <code>setValues()</code></li>
-</ol>
-<p>This pattern is the foundation of efficient spreadsheet
-automation.</p>
+<h1 data-number="6" id="arrays"><span
+
+class="header-section-number">6</span> Arrays</h1>
+
+<h2 data-number="6.1" id="why-arrays-matter-in-apps-script"><span
+
+class="header-section-number">6.1</span> Why Arrays Matter in Apps
+
+Script</h2>
+
+<p>When you start automating Google Sheets with Apps Script, you quickly
+
+discover that working with <strong>one value at a time</strong> isn&#8217;t
+
+enough. Spreadsheets are built around <strong>lists</strong>,
+
+<strong>columns</strong>, and <strong>tables</strong>&#8212;all collections of
+
+values. To handle that kind of data, you need a structure that can hold
+data-environment="none"
+many items at once. That&#8217;s exactly what arrays are designed for.</p>
+
+<p>Arrays let your scripts read, process, and transform groups of values
+data-environment="none"
+efficiently. They&#8217;re the backbone of almost every meaningful spreadsheet
+
+automation you&#8217;ll write.</p>
+
+<h3 data-number="6.1.1"
+
+id="arrays-hold-multiple-values-in-a-single-variable"><span
+
+class="header-section-number">6.1.1</span> Arrays Hold Multiple Values
+
+in a Single Variable</h3>
+
+<p>A normal variable stores one value:</p>
+
+<pre class="code" data-convert="false"> 
+
+let city = "Denver"
+
+</pre>
+
+<p>An array stores many:</p>
+
+<pre class="code" data-convert="false"> 
+
+let cities = ["Denver", "Chicago", "Boston"]
+
+</pre>
+
+<p>This ability to group related values is essential when you&#8217;re dealing
+
+with spreadsheet data, which naturally comes in lists.</p>
+
+<h3 data-number="6.1.2"
+
+id="arrays-are-how-google-sheets-returns-ranges"><span
+
+class="header-section-number">6.1.2</span> Arrays Are How Google Sheets
+
+Returns Ranges</h3>
+
+<p>When you read a single cell, you get a single value. But when you
+
+read <strong>multiple cells</strong>, Apps Script returns an
+
+<strong>array of arrays</strong>:</p>
+
+<ul>
+
+<li>Each <strong>inner array</strong> represents a row</li>
+
+<li>The <strong>outer array</strong> contains all the rows you
+
+requested</li>
+
+</ul>
+
+<p>This structure mirrors the shape of the spreadsheet, but in
+
+JavaScript form. Once you understand arrays of arrays, you can process
+
+entire ranges at once instead of working cell by cell.</p>
+
+<h3 data-number="6.1.3"
+
+id="arrays-make-your-scripts-faster-and-cleaner"><span
+
+class="header-section-number">6.1.3</span> Arrays Make Your Scripts
+
+Faster and Cleaner</h3>
+
+<p>Apps Script is at its best when you:</p>
+
+<ul>
+
+<li>Read a whole range into an array</li>
+
+<li>Process the dadata-environment="none"
+
+<li>Write the results back in one step</li>
+
+</ul>
+
+<p>This approach is dramatically faster than touching the spreadsheet
+
+repeatedly. Arrays make that possible.</p>
+
+<h3 data-number="6.1.4"
+
+id="arrays-help-you-think-in-terms-of-data-not-cells"><span
+
+class="header-section-number">6.1.4</span> Arrays Help You Think in
+
+Terms of Data, Not Cells</h3>
+
+<p>Once you start data-environment="none"ental model shifts:</p>
+
+<ul>
+
+<li>Instead of &#8data-environment="none"you think &#8220;get the second item in the
+
+list.&#8221;</li>
+
+<li>Instead of &#8data-environment="none"l in column B,&#8221; you think &#8220;consider each
+
+row and look at index 1.&#8221;</li>
+
+<li>Instead of &#8220;write to row 10,&#8221; you think &#8220;update the tenth array
+
+element.&#8221;</li>
+
+</ul>
+
+<p>This mindset isdata-environment="none"ns handle data&#8212;by working with
+
+collections rather than isolated pieces.</p>
+
+<h3 data-number="6.1.5" id="what-youll-learn-in-this-chapter"><span
+
+class="header-section-number">6.1.5</span> What You&#8217;ll Learn in This
+
+Chapter</h3>
+
+<p>In the sections ahead, you&#8217;ll explore:</p>
+data-environment="none"
+<ul>
+
+<li>How to create and use arrays</li>
+
+<li>How to work with arrays of arrays returned by Google Sheets</li>
+
+<li>Useful array mdata-environment="none"ing data</li>
+
+<li>How to write arrays back into the sheet</li>
+
+<li>Real&#8209;world examples that turn raw spreadsheet ranges into meaningful
+
+results</li>
+
+</ul>
+
+<p>By the end of this chapter, arrays will feel natural and
+
+intuitive&#8212;andata-environment="none"ady to build scripts that handle real&#8209;world
+
+data with confidence and speed.</p>
+
+<h2 data-number="6.2" id="understanding-arrays"><span
+
+class="header-section-number">6.2</span> Understanding Arrays</h2>
+
+<p>Arrays are one of the most important data structures you&#8217;ll use in
+
+JavaScript and Google Apps Script. If variables let you store a single
+
+value, arrays let you store <strong>many values in a single
+
+place</strong>&#8212;a list, a sequence, a collection. This becomes essential
+
+when you start working with spreadsheet data, because Sheets almost
+
+always gives you information in groups: rows, columns, or entire
+
+tables.</p>
+
+<p>Think of an array as a row of labeled boxes, each holding a value.
+
+You can look inside any box, change what&#8217;s in it, or look at all of them
+
+one by one.</p>
+
+<h3 data-number="6.2.1" id="what-an-array-looks-like"><span
+
+class="header-section-number">6.2.1</span> What an Array Looks Like</h3>
+
+<p>Arrays are created using square brackets:</p>
+
+<pre class="code" data-convert="false">
+
+let colors = ["red", "green", "blue"]
+
+let scores = [95, 87, 72, 100]
+
+</pre>
+
+<p>Each item in the array has a position called an
+
+<strong>index</strong>. JavaScript starts counting at
+
+<strong>0</strong>, not 1:</p>
+
+<ul>data-environment="none"
+
+<li><code>colors[0]</code> &#8594; <code>"red"</code></li>
+
+<li><code>colors[1]</code> &#8594; <code>"green"</code></li>
+
+<li><code>colors[2]</code> &#8594; <code>"blue"</code></li>
+
+</ul>
+
+<p>This &#8220;zero&#8209;based indexing&#8221; is standard in most programming
+
+languages.</p>
+
+<h3 data-number="6.2.2" id="accessing-and-changing-array-values"><span
+
+class="header-section-number">6.2.2</span> Accessing and Changing Array
+
+Values</h3>
+
+<p>You can read a value by referencing its index:</p>
+
+<pre class="code" data-convert="false">
+
+let firstColor = colors[0]
+
+</pre>
+
+<p>You can also change a value:</p>
+
+<pre class="code" data-convert="false">
+
+colors[1] = "yellow"   // replaces "green"
+
+</pre>
+
+<p>Or add new values:</p>
+
+<pre class="code" data-convert="false">
+
+colors.push("purple")
+
+</pre>
+
+<p>Arrays grow as needed&#8212;you don&#8217;t have to declare their size ahead of
+
+time.</p>
+
+<h3 data-number="6.2.3" id="arrays-can-hold-any-type-of-data"><span
+
+class="header-section-number">6.2.3</span> Arrays Can Hold Any Type of
+
+Data</h3>
+
+<p>Arrays aren&#8217;t limited to one type of value. You can mix strings,
+
+numbers, booleans, or even other arrays:</p>
+
+<pre class="code" data-convert="false">
+
+let mixed = ["Ava", 42, true]
+
+</pre>
+
+<p>In practice, though, it&#8217;s best to keep arrays consistent so your code
+
+stays predictable.</p>
+
+<h3 data-number="6.2.4" id="common-mistakes-to-watch-for"><span
+
+class="header-section-number">6.2.4</span> Common Mistakes to Watch
+
+For</h3>
+
+<p><strong>Off&#8209;by&#8209;one errors</strong><br />
+
+Because arrays stadata-environment="none"ners often try to access an index
+
+that doesn&#8217;t exist:</p>
+
+<pre class="code" data-convert="false">
+
+let items = ["a", "b", "c"]
+
+items[3]  // This will be undefined since there is no index 3
+
+</pre>
+
+<p><strong>Empty adata-environment="none"
+
+An array with no items still exists, but accessing any index returns
+
+<code>undefined</code>:</p>
+
+<pre class="code" data-convert="false">
+
+let empty = []
+
+empty[0]  // undefined
+
+</pre>
+data-environment="none"
+<p><strong>Forgetting that arrays are ordered</strong><br />
+
+If order matters&#8212;like rows in a spreadsheet&#8212;be careful when adding or
+
+removing items.</p>
+
+<h3 data-number="6.2.5" id="why-arrays-matter-in-apps-script-1"><span
+
+class="header-sectdata-environment="none"pan> Why Arrays Matter in Apps
+
+Script</h3>
+
+<p>Arrays become essential when you start working with Google Sheets.
+
+For example:</p>
+
+<pre class="code" data-convert="false">
+
+let sheet = SpreadsheetApp.getActiveSheet()
+
+let range= sheet.getRange("A1:A10")
+
+let values= range.getValues()
+
+</pre>
+
+<p><code>getValues()</code> returns an array of arrays&#8212;an array of rows,
+
+where each row is itself an array. You&#8217;ll explore this in detail in the
+
+next section, but the key idea is this:</p>
+
+<p><strong>Arrays are how Apps Script represents spreadsheet
+
+data.</strong></p>
+
+<p>If you want to process multiple rows, clean up a column, or generate
+
+new output, you&#8217;ll be working with arrays.</p>
+
+<h3 data-number="6.2.6" id="what-you-can-do-with-arrays"><span
+
+class="header-section-number">6.2.6</span> What You Can Do With
+
+Arrays</h3>
+
+<p>By the end of this chapter, arrays will feel like second nature.
+
+You&#8217;ll use them to:</p>
+
+<ul>
+
+<li>Read data from a sheet into an array</li>
+
+<li>Transform values before writing them back</li>
+data-environment="none"
+<li>Build new lists from existing ones</li>
+
+<li>Represent entire tables in memory</li>
+
+</ul>
+
+<p>Arrays are the gateway to handling real&#8209;world data at scale. Once
+
+you&#8217;re comfortable with them, you&#8217;ll be ready to tackle the arrays of
+
+arrays that Google Sheets gives you&#8212;and that&#8217;s where your Apps Script
+
+skills really start to shine.</p>
+
+<h2 data-number="6.3" id="arrays-and-google-sheets"><span
+
+class="header-section-number">6.3</span> Arrays and Google Sheets</h2>
+
+<p>Arrays become truly useful once you start working with data from
+
+Google Sheets. Almost everything you read from a sheet&#8212;whether it&#8217;s a
+
+column, a row, or a whole table&#8212;comes back as an <strong>array</strong>.
+data-environment="none"
+And when you read more than one cell at a time, Apps Script gives you an
+
+<strong>array of arrays</strong>, where each inner array represents a
+
+single row of data.</p>
+
+<p>Understanding this structure is the key to writing fast, efficient
+
+spreadsheet automations.</p>
+
+<h3 data-number="6.3.1" id="getvalue-vs.-getvalues"><span
+
+class="header-section-number">6.3.1</span> <code>getValue()</code>
+
+vs.&#160;<code>getValues()</code></h3>
+
+<p>These two methods behave very differently:</p>
+
+<ul>
+
+<li><strong><code>getValue()</code></strong> returns a <em>single
+
+value</em></li>
+
+<li><strong><code>getValues()</code></strong> returns an <em>array of
+
+arrays</em></li>
+
+</ul>
+
+<p>Example:</p>
+
+<pre class="code" data-convert="false">
+
+let sheet = SpreadsheetApp.getActiveSheet()
+
+
+
+
+
+let singleValue = sheet.getRange("A1").getValue()  // one value
+
+
+
+
+
+// array of arrays
+
+let manyValues = sheet.getRange("A1:A5").getValues() 
+
+</pre>
+
+<p>If you log <code>manyValues</code>, you&#8217;ll see something like:</p>
+
+<p>[<br />
+
+[&#8220;Ava&#8221;],<br />
+
+[&#8220;Jordan&#8221;],<br />
+
+[&#8220;Mia&#8221;],<br />
+
+[&#8220;Sam&#8221;],<br />
+
+[&#8220;Leo&#8221;]<br />
+
+]</p>
+
+<p>Each inner array represents one row from the range.</p>
+
+<h3 data-number="6.3.2" id="thinking-in-rows-and-columns"><span
+
+class="header-section-number">6.3.2</span> Thinking in Rows and
+
+Columns</h3>
+
+<p>When you read a range like <code>"A1:C1"</code>, you get <strong>one
+
+row</strong>, represented as an array:</p>
+
+<p>[&#8220;Ava&#8221;, &#8220;Smith&#8221;, 28]</p>
+
+<p>When you read <code>"A1:C3"</code>, you get <strong>three
+
+rows</strong>, represented as an array of arrays:</p>
+
+<p>[<br />
+
+[&#8220;Ava&#8221;, &#8220;Smith&#8221;, 28],<br />
+
+[&#8220;Jordan&#8221;, &#8220;Lee&#8221;, 31],<br />
+
+[&#8220;Mia&#8221;, &#8220;Chen&#8221;, 25]<br />
+
+]</p>
+
+<p>This structure mirrors the spreadsheet:</p>
+
+<ul>
+
+<li>Outer array &#8594; all rows</li>
+
+<li>Inner arrays &#8594; each row</li>
+
+<li>Items inside inner arrays &#8594; each cell in that row</li>
+
+</ul>
+
+<p>Once you see the pattern, it becomes intuitive.</p>
+
+<h3 data-number="6.3.3" id="extracting-values"><span
+
+class="header-section-number">6.3.3</span> Extracting Values</h3>
+
+<p>In the next chapter, we&#8217;ll see how to use something called a &#8220;loop&#8221;
+
+to extract values from an array in an elegant way, but for now, let&#8217;s
+
+see how to refer to individual values in an array of arrays. Suppose you
+
+had a spreadsheet with the following data:</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align: left;"></th>
+
+<th>A</th>
+
+<th>B</th>
+
+<th>C</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align: left;">1</td>
+
+<td>Ada</td>
+
+<td>Lovelace</td>
+
+<td>1815</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: left;">2</td>
+
+<td>Charles</td>
+
+<td>Babbage</td>
+
+<td>1791</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align: left;">3</td>
+
+<td>Mary</td>
+
+<td>Sommerville</td>
+
+<td>1780</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>If you were to execute this statement:</p>
+
+<pre class="code" data-convert="false">
+
+let data = sheet.getRange("A1:C3").getValues()
+
+</pre>
+
+<p>you would have a variable named &#8220;data&#8221; containing an array of arrays
+
+that looks as follows:</p>
+
+<p>[<br />
+
+[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815],<br />
+
+[&#8220;Charles&#8221;, &#8220;Babbage&#8221;, 1791],<br />
+
+[&#8220;Mary&#8221;, &#8220;Sommerville&#8221;, 1780]<br />
+
+]</p>
+
+<p>Here is one approach to read the data from the first row into
+
+individual variables</p>
+
+<pre class="code" data-convert="false">
+
+let data = sheet.getRange("A1:C3").getValues()
+
+
+
+let firstRow = data[0]         // ["Ada", "Lovelace", 1815]
+
+let firstName = firstRow[0]     // "Ada"
+
+let lastName = firstRow[1]      // "Lovelace"
+
+let age = firstRow[2]           // 1815
+
+</pre>
+
+<p>In this example, we assign a variable named &#8220;firstRow&#8221; to the first
+
+value in the &#8220;data&#8221; array. That value is itself an array, holding the
+
+values Ada, Lovelace, and 1815. Then use the &#8220;firstRow&#8221; variable to
+
+access individual values. However, we can accomplish the same result
+
+without the intermediated variable (firstRow) as follows:</p>
+
+<pre class="code" data-convert="false">
+
+let data = sheet.getRange("A1:C3").getValues()
+
+
+
+let firstName = data[0][0]    // "Ada"
+
+let lastName = data[0][1]     // "Lovelace"
+
+let age = data[0][2]          // 1815
+
+</pre>
+
+<p>Similarly, you can pull out a single column by accessing the first
+
+element of each inner array:</p>
+
+<pre class="code" data-convert="false">
+
+let data = sheet.getRange("A1:A3").getValues()
+
+
+
+let first = data[0][0]     // Ada
+
+let second = data[1][0]    // Charles
+
+let third = data[2][0]     // Mary
+
+</pre>
+
+<p>You&#8217;re simply navigating the structure&#8212;outer array first, then inner
+
+array.</p>
+
+<h3 data-number="6.3.4" id="why-this-matters"><span
+
+class="header-section-number">6.3.4</span> Why This Matters</h3>
+
+<p>Arrays are the format Google Sheets uses to give you data. Once you
+
+understand how to read and access values inside arrays of arrays, you
+
+can:</p>
+
+<ul>
+
+<li>Work with entire ranges at once</li>
+
+<li>Extract specific rows or columns</li>
+
+<li>Prepare data for later transformation</li>
+
+<li>Build scripts that handle more than one cell at a time</li>
+
+</ul>
+
+<p>This sets the stage for everything that comes next. Soon you&#8217;ll learn
+
+how to transform these arrays, reshape them, and prepare them for
+
+writing back into the sheet.</p>
+
+<h2 data-number="6.4" id="writing-arrays-back-to-the-worksheet"><span
+
+class="header-section-number">6.4</span> Writing Arrays Back to the
+
+Worksheet</h2>
+
+<p>Now that you&#8217;ve seen how Google Sheets gives you data as arrays (and
+
+arrays of arrays), the next step is learning how to
+
+<strong>write</strong> data back into the sheet. This is where arrays
+
+become truly powerful: you can prepare all your data in memory and then
+
+write it to the spreadsheet in a single, efficient operation.</p>
+
+<p>Apps Script provides two main methods for writing values:</p>
+
+<ul>
+
+<li><strong><code>setValue()</code></strong> &#8212; writes a <em>single</em>
+
+value</li>
+
+<li><strong><code>setValues()</code></strong> &#8212; writes an <em>array of
+
+arrays</em></li>
+
+</ul>
+
+<p>Since this chapter focuses on arrays, we&#8217;ll work with
+
+<code>setValues()</code>.</p>
+
+<h3 data-number="6.4.1" id="writing-a-single-row-one-inner-array"><span
+
+class="header-section-number">6.4.1</span> Writing a Single Row (One
+
+Inner Array)</h3>
+
+<p>If you want to write one row of data, you pass a single inner array.
+
+For example, using the row:</p>
+
+<p>[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815]</p>
+
+<p>You can write it like this:</p>
+
+<pre class="code" data-convert="false">
+
+function writeOneRow() {
+
+  let sheet = SpreadsheetApp.getActiveSheet()
+
+  let row = ["Ada", "Lovelace", 1815]
+
+
+
+  sheet.getRange("A1:C1").setValues([row])
+
+}
+
+</pre>
+
+<p>Notice that <code>setValues()</code> expects an <strong>array of
+
+arrays</strong>, even if you&#8217;re only writing one row. That&#8217;s why we wrap
+
+<code>row</code> in another pair of brackets.</p>
+
+<h3 data-number="6.4.2"
+
+id="writing-multiple-rows-an-array-of-arrays"><span
+
+class="header-section-number">6.4.2</span> Writing Multiple Rows (An
+
+Array of Arrays)</h3>
+
+<p>Here&#8217;s the full dataset as an array of arrays:</p>
+
+<p>[<br />
+
+[&#8220;Ada&#8221;, &#8220;Lovelace&#8221;, 1815],<br />
+
+[&#8220;Charles&#8221;, &#8220;Babbage&#8221;, 1791],<br />
+
+[&#8220;Mary&#8221;, &#8220;Sommerville&#8221;, 1780]<br />
+
+]</p>
+
+<p>This structure is already perfect for <code>setValues()</code>. Each
+
+inner array is a row, and the outer array contains all the rows.</p>
+
+<p>To write all three rows into the sheet:</p>
+
+<pre class="code" data-convert="false">
+
+function writeManyRows() {
+
+  let sheet = SpreadsheetApp.getActiveSheet()
+
+
+
+  let data = [
+
+    ["Ada", "Lovelace", 1815],
+
+    ["Charles", "Babbage", 1791],
+
+    ["Mary", "Sommerville", 1780]
+
+  ]
+
+
+
+  sheet.getRange("A1:C3").setValues(data)
+
+}
+
+</pre>
+
+<p>As long as the range size matches the array size (3 rows &#215; 3
+
+columns), Apps Script writes everything in one step.</p>
+
+<h3 data-number="6.4.3" id="why-this-matters-1"><span
+
+class="header-section-number">6.4.3</span> Why This Matters</h3>
+
+<p>Writing data with <code>setValues()</code> is:</p>
+
+<ul>
+
+<li><strong>Fast</strong> &#8212; one operation instead of many</li>
+
+<li><strong>Clean</strong> &#8212; your script stays simple and readable</li>
+
+<li><strong>Reliable</strong> &#8212; the structure of your array matches the
+
+structure of the sheet</li>
+
+</ul>
+
+<p>This is the preferred way to write any non&#8209;trivial amount of data
+
+back into Google Sheets.</p>
+
+<h3 data-number="6.4.4" id="a-helpful-pattern-to-remember"><span
+
+class="header-section-number">6.4.4</span> A Helpful Pattern to
+
+Remember</h3>
+
+<p>Whenever you want to write data:</p>
+
+<ol type="1">
+
+<li>Build an <strong>array of arrays</strong> in memory</li>
+
+<li>Select a range with the same dimensions</li>
+
+<li>Call <code>setValues()</code></li>
+
+</ol>
+
+<p>This pattern is the foundation of efficient spreadsheet
+
+automation.</p>
+
 <!--postEnd-->
               </div>
 </div>

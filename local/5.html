@@ -529,17 +529,17 @@ class="header-section-number">5.1</span> <code>if</code>,
 <code>else if</code>, <code>else</code></h2>
 <p>Programs become truly useful when they can make decisions. Instead of
 running the same instructions every time, your code can choose different
-paths depending on the situation&#8212;just like you do in everyday life. In
-JavaScript and Google Apps Script, the primary tool for decision&#8209;making
+paths depending on the situation—just like you do in everyday life. In
+JavaScript and Google Apps Script, the primary tool for decision‑making
 is the <strong>if statement</strong>.</p>
 <p>Think of <code>if</code>, <code>else if</code>, and <code>else</code>
 as a branching path. Your program checks a condition, and based on
-whether it&#8217;s true or false, it decides what to do next.</p>
+whether it’s true or false, it decides what to do next.</p>
 <h3 data-number="5.1.1" id="the-basic-if-statement"><span
 class="header-section-number">5.1.1</span> The Basic <code>if</code>
 Statement</h3>
 <p>An <code>if</code> statement checks a condition. If the condition is
-<strong>true</strong>, the code inside the block runs. If it&#8217;s
+<strong>true</strong>, the code inside the block runs. If it’s
 <strong>false</strong>, the block is skipped.</p>
 <pre class="code"> 
 let score = 85
@@ -553,8 +553,8 @@ if (score > 70) {
 <h3 data-number="5.1.2" id="adding-more-options-with-else-if"><span
 class="header-section-number">5.1.2</span> Adding More Options With
 <code>else if</code></h3>
-<p>Sometimes one condition isn&#8217;t enough. You may want to check multiple
-possibilities in order. That&#8217;s where <code>else if</code> comes in.</p>
+<p>Sometimes one condition isn’t enough. You may want to check multiple
+possibilities in order. That’s where <code>else if</code> comes in.</p>
 <pre class="code" > 
 let temperature = 65
 
@@ -564,14 +564,14 @@ if (temperature > 80) {
   console.log("It's warm outside.")
 }
 </pre>
-<p>The program checks the first condition. If it&#8217;s false, it moves on to
+<p>The program checks the first condition. If it’s false, it moves on to
 check the next one. Only the block of code associated with the first
-condition that evaluates to &#8220;true&#8221; runs.</p>
+condition that evaluates to “true” runs.</p>
 <h3 data-number="5.1.3" id="catching-everything-else-with-else"><span
 class="header-section-number">5.1.3</span> Catching Everything Else With
 <code>else</code></h3>
 <p>The <code>else</code> block runs when none of the previous conditions
-evaluate to true. It&#8217;s your &#8220;fallback&#8221; option.</p>
+evaluate to true. It’s your “fallback” option.</p>
 <pre class="code" > 
 let temperature = 45
 
@@ -588,7 +588,7 @@ what the temperature is.</p>
 <h3 data-number="5.1.4" id="how-this-applies-in-apps-script"><span
 class="header-section-number">5.1.4</span> How This Applies in Apps
 Script</h3>
-<p>Decision&#8209;making becomes especially powerful when you&#8217;re working with
+<p>Decision‑making becomes especially powerful when you’re working with
 spreadsheet data. For example, you might:</p>
 <ul>
 <li>Check whether a cell is empty</li>
@@ -596,7 +596,7 @@ spreadsheet data. For example, you might:</p>
 <li>Categorize data into groups</li>
 <li>Trigger different actions based on user input</li>
 </ul>
-<p>Here&#8217;s a simple example that reads a number from cell A1 and writes a
+<p>Here’s a simple example that reads a number from cell A1 and writes a
 message into B1 based on the value:</p>
 <pre class="code"> 
 function checkValue() {
@@ -628,15 +628,15 @@ can:</p>
 <li>Control the flow of your script</li>
 <li>Make your spreadsheet tools feel dynamic and responsive</li>
 </ul>
-<p>These decision&#8209;making tools are the foundation for everything from
-simple checks to complex logic. In the next sections, you&#8217;ll learn how
+<p>These decision‑making tools are the foundation for everything from
+simple checks to complex logic. In the next sections, you’ll learn how
 to combine conditions, compare values, and build more sophisticated
 decision structures that bring your Apps Script projects to life.</p>
 <h2 data-number="5.2" id="comparison-and-logical-operators"><span
 class="header-section-number">5.2</span> Comparison and Logical
 Operators</h2>
-<p>Decision&#8209;making in JavaScript depends on evaluating
-conditions&#8212;questions your program asks to decide what to do next. To
+<p>Decision‑making in JavaScript depends on evaluating
+conditions—questions your program asks to decide what to do next. To
 express those questions, you use <strong>comparison operators</strong>
 and <strong>logical operators</strong>. These tools let your code
 compare values, combine conditions, and determine whether something is
@@ -732,13 +732,13 @@ if (age >= 18) {
 <h3 data-number="5.2.2" id="logical-operators"><span
 class="header-section-number">5.2.2</span> Logical Operators</h3>
 <p>Logical operators let you combine multiple conditions or invert a
-condition. They&#8217;re essential when your program needs to check more than
+condition. They’re essential when your program needs to check more than
 one thing at a time.</p>
 <h4 data-number="5.2.2.1" id="and"><span
 class="header-section-number">5.2.2.1</span> AND
 (<code>&amp;&amp;</code>)</h4>
 <p>The entire expression is true only if both conditions are true.</p>
-<pre class="code" data-convert="false"> 
+<pre class="code" data-environment="none"> 
 if (score > 80 && isComplete) {
   console.log("Great job!")
 }
@@ -746,7 +746,7 @@ if (score > 80 && isComplete) {
 <h4 data-number="5.2.2.2" id="or"><span
 class="header-section-number">5.2.2.2</span> OR (<code>||</code>)</h4>
 <p>The entire expression is true if either condition is true.</p>
-<pre class="code" data-convert="false"> 
+<pre class="code" data-environment="none"> 
 if (day === "Saturday" || day === "Sunday") {
   console.log("It's the weekend!") 
 }
@@ -754,7 +754,7 @@ if (day === "Saturday" || day === "Sunday") {
 <h4 data-number="5.2.2.3" id="not"><span
 class="header-section-number">5.2.2.3</span> NOT (<code>!</code>)</h4>
 <p>Flips a boolean value.</p>
-<pre class="code" data-convert="false"> 
+<pre class="code" data-environment="none"> 
 if (!isActive) {
   console.log("The account is inactive.")
 }
@@ -766,7 +766,7 @@ class="header-section-number">5.2.3</span> Using Operators With
 Spreadsheet Data</h3>
 <p>Apps Script is often used to read values from cells and evaluate
 them. For example:</p>
-<pre class="code" data-convert="false"> 
+<pre class="code" data-environment="none"> 
 function categorizeScore() {
   let sheet = SpreadsheetApp.getActiveSheet()
   let cellA1 = sheet.getRange("A1")
@@ -789,7 +789,7 @@ working together to classify the score.</p>
 <h3 data-number="5.2.4" id="why-these-operators-matter"><span
 class="header-section-number">5.2.4</span> Why These Operators
 Matter</h3>
-<p>Comparison and logical operators are the backbone of decision&#8209;making.
+<p>Comparison and logical operators are the backbone of decision‑making.
 They allow your scripts to:</p>
 <ul>
 <li>Validate input</li>
@@ -798,13 +798,13 @@ They allow your scripts to:</p>
 <li>Control the flow of your program</li>
 <li>Respond intelligently to spreadsheet values</li>
 </ul>
-<p>Once you&#8217;re comfortable with these operators, you&#8217;ll be able to write
+<p>Once you’re comfortable with these operators, you’ll be able to write
 much more expressive and flexible logic, turning your Apps Script
 projects into tools that adapt to whatever data they encounter.</p>
 <h2 data-number="5.3"
 id="realworld-examples-of-decisionmaking-in-apps-script"><span
-class="header-section-number">5.3</span> Real&#8209;World Examples of
-Decision&#8209;Making in Apps Script</h2>
+class="header-section-number">5.3</span> Real‑World Examples of
+Decision‑Making in Apps Script</h2>
 <!--postEnd-->
               </div>
 </div>

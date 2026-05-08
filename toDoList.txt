@@ -17,7 +17,7 @@ for tia 4/10
     </pre>
 
 BUT for when for an non running/editing example do this 
-    <pre class="code" data-convert="false">
+    <pre class="code" data-environment="none">
     5 + 7
     </pre>
 
