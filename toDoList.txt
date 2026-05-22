@@ -1,28 +1,30 @@
-for tia 4/10
-
-----1,2,3,4,5,6,7,8,9
-* remove all written chapter numbers (sub chap too) 
-
-----1,2,3,4,5,6,7,8,9
-*add the yaml block to the top of all chapters
+we are current getting the prompt generation up and running with the button at the end of each chapter section.
+we want to mauyve use a pre tag or a button tag to give the button text to what we want the ai do generate. we want this to be pretty dynamic
 
 
 
+this is the function weve used to get the current context. but we still need to scrape the ToC and the addiont context for the AI
 
-----1,2,3,4,5 -started 6
-*find code blocks and add this to them ex. 
-    <pre class="code">
-    2 + 3;
-    1 + 2;
-    </pre>
+ function makePrompt(evt){
+  if(evt){
+    console.log(evt.target)
+    let elem = evt.target
+    const html=[]
+    while(elem.tagName!=="H2"){
+      elem = elem.previousElementSibling
+      if(elem.tagName==="DIV" && elem.className==="monaco"){
+        continue
+      }
+      html.unshift(elem.outerHTML)
+    }
+    console.log("fount it:", elem.tagName) 
+    console.log(html)
+    const turndownService = new TurndownService();
 
-BUT for when for an non running/editing example do this 
-    <pre class="code" data-environment="none">
-    5 + 7
-    </pre>
+    console.log(turndownService.turndown(html.join("")))
+  }
+
+}
 
 
-----1,2,3,4,5
-* for code stuff the = has been converted to \= we need to change this. So Copy All code blocks/examples from 
-original source and past them inside the Pre tag from above
 
