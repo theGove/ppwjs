@@ -1,3 +1,9 @@
 {
-  "blogUrl":"book1007.blogspot.com"
+  "blogUrl":"book1007.blogspot.com",
+  "title": "Personal Productivity with Javascript",
+  "authors": [
+     "Gove Allen",
+     "Mattia Allen"
+   ],
+   "chapterLabel": "Chapter"  
 }
