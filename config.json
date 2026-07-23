@@ -5,5 +5,10 @@
      "Gove Allen",
      "Mattia Allen"
    ],
-   "chapterLabel": "Chapter"  
+   "chapterLabel": "Chapter",
+  "pro": {
+    "contentDir": "../pro/content",
+    "slug": "ppwjs",
+    "title": "Personal Productivity with JavaScript"
+  }   
 }
