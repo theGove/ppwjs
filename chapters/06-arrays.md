@@ -2,8 +2,6 @@
 _$_import: monaco
 ---
 
-# Arrays
-
 ## Why Arrays Matter in Apps Script
 
 When you start automating Google Sheets with Apps Script, you quickly discover that working with **one value at a time** isn’t enough. Spreadsheets are built around **lists**, **columns**, and **tables**—all collections of values. To handle that kind of data, you need a structure that can hold many items at once. That’s exactly what arrays are designed for.

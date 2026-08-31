@@ -2,8 +2,6 @@
 _$_import: monaco
 ---
 
-# Your First Lines of Code
-
 ## Writing and Running Simple Statements
 
 Before you can build programs that make decisions, loop through data, or interact with the world, you need to get comfortable with one of the most fundamental building blocks of all: the **expression**. An expression is any piece of code that the computer evaluates to produce a specific value. It might be a simple number, a piece of text, or a complex calculation. Think of expressions as the meaningful phrases or ingredients that provide the "data" for your code.

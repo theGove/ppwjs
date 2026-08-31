@@ -6,10 +6,81 @@
      "Gove Allen",
      "Mattia Allen"
    ],
-   "chapterLabel": "Chapter",
+  "chapterLabel": "Chapter",
+  "pagesProjectName": "book-js",
+  "cloudflareAccountId": "0bfdb544606ce71a8c67be03fabd48ee",
+  "appSlug": "js",
   "pro": {
     "contentDir": "../pro/content",
     "slug": "ppwjs",
     "title": "Personal Productivity with JavaScript"
-  }   
+  },
+  "versions":{
+    "alpha":{
+      "chapters":[
+        {
+          "id":"welcome",
+          "title":"Welcome to Programming",
+          "filename":"1.html"
+        },{
+          "id":"first-code",
+          "title":"Your First Lines of Code",
+          "filename":"2.html"
+        },{
+          "id":"apps-script",
+          "title":"Getting Started with Google Apps Script in Google Sheets",
+          "filename":"3.html"
+        },{
+          "id":"variables",
+          "title":"Variables and Data",
+          "filename":"4.html"
+        },{
+          "id":"decisions",
+          "title":"Making Decisions",
+          "filename":"5.html"
+        },{
+          "id":"arrays",
+          "title":"Arrays",
+          "filename":"6.html"
+        },{
+          "id":"loops",
+          "title":"Loops and Repetition",
+          "filename":"7.html"
+        },{
+          "id":"case",
+          "title":"College Community Garden: Case setup",
+          "filename":"8.html"
+        },{
+          "id":"google-forms",
+          "title":"Google Forms",
+          "filename":"9.html"
+        }
+      ]
+    },
+    "beta":{
+      "chapters":[
+        {
+          "id":"welcome",
+          "title":"Welcome to Programming",
+          "filename":"1.html"
+        },{
+          "id":"first-code",
+          "title":"Your First Lines of Code",
+          "filename":"2.html"
+        },{
+          "id":"apps-script",
+          "title":"Getting Started with Google Apps Script in Google Sheets",
+          "filename":"3.html"
+        },{
+          "id":"decisions",
+          "title":"Making Decisions",
+          "filename":"5.html"
+        },{
+          "id":"variables",
+          "title":"Variables and Data",
+          "filename":"4.html"
+        }
+      ]
+    }
+  }
 }

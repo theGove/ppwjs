@@ -2,8 +2,6 @@
 _junk: morano
 ---
 
-# College Community Garden: Case setup
-
 ## Introduction
 
 Chapter 8 introduces the story of a student‑founded community‑garden club—an example that will serve as the backdrop for many of the code samples in the chapters ahead. You don’t need to read this chapter to learn the programming concepts in the book, but spending a few minutes with the story will give you helpful context for the kinds of problems we’ll solve later: organizing volunteers, tracking information, and automating small but meaningful tasks. If you enjoy having a concrete setting to imagine as you write code, this chapter will make the examples feel more grounded and real; if you prefer to focus purely on the technical material, feel free to skip ahead without missing any essential knowledge.

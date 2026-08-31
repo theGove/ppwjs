@@ -2,8 +2,6 @@
 _$_import: monaco
 ---
 
-# Loops and Repetition
-
 ## Why Loops Matter
 
 When you’re working with Google Sheets, you rarely want to perform an action just once. More often, you want to repeat something many times:

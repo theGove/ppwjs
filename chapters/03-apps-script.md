@@ -2,8 +2,6 @@
 _junk: morano
 ---
 
-# Getting Started with Google Apps Script in Google Sheets
-
 ## Welcome to Google Sheets as a Programming Environment
 
 Google Sheets might not look like a programming environment at first glance. It’s familiar, friendly, and built for everyday tasks like tracking budgets or organizing lists. But beneath its grid of rows and columns lies a surprisingly powerful platform for learning applied programming. When paired with Google Apps Script, Sheets becomes an interactive playground where your code can manipulate real data, automate repetitive work, and build tools that feel instantly useful.

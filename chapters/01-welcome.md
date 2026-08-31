@@ -1,10 +1,8 @@
 ---
 _junk: morano
-#add this to any chapter without JS code in it
+# add this to any chapter without JS code in it
 # but if it does have JS add _$_import: monaco instead
 ---
-
-# Welcome to Programming!
 
 ## What Programming Actually Is
 
@@ -40,7 +38,7 @@ Once you grasp this, programming stops feeling mysterious. You’re no longer tr
 
 Choosing your first programming language is a bit like choosing your first musical instrument. You want something approachable, versatile, and rewarding—something that lets you make real, satisfying progress early on. JavaScript fits that role beautifully, which is why millions of beginners start their programming journey with it.
 
-One of JavaScript’s biggest strengths is its accessibility. You don’t need to install special software or set up a complicated environment. If you have a web browser, you already have everything required to write and run JavaScript. You can open a console, type a line of code, and see the result instantly. That immediate feedback makes learning feel playful rather than intimidating.
+One of JavaScript’s biggest strengths is its accessibility. You don’t need to install special software or set up a complicated environment. If you have a web browser, you already have everything required to write and run JavaScript. You can open a console, type a line of code, and see the result instantly. That immediate feedback makes learning feel playful rather than intimidating.  We'll see more detail on this in [Using the Console in Your Browser](first-code){.book-link}.
 
 JavaScript is also everywhere. It powers the interactive parts of websites, runs on servers, controls mobile apps, automates workflows, and even drives hardware projects. Learning it gives you a passport into many different areas of technology. You can start small—maybe by changing the text on a webpage—and gradually build up to full applications without ever switching languages.
 

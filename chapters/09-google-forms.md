@@ -2,8 +2,6 @@
 _junk: morano
 ---
 
-# Google Forms
-
 ## Section title
 
 As spring break approached, the club planned its first official meeting, The Spring (Ground) Break kickoff, where students and community members could tour the garden site, meet one another, and choose the roles they were most excited about. To keep things organized, you and the team decided to collect sign‑ups ahead of time using a simple online form, shared through flyers and posters around campus with a QR code that linked directly to it. People could still sign up in person at the event, but having most volunteers register beforehand would help you estimate attendance, prepare materials, and group people by interest. It was the perfect moment to introduce a tool that would soon become essential to the club’s workflow: using Google Forms to gather clean, structured information that could flow straight into your spreadsheets, and eventually, into your automated systems.

@@ -2,8 +2,6 @@
 _$_import: monaco
 ---
 
-# Making Decisions
-
 ## `if`, `else if`, `else`
 
 Programs become truly useful when they can make decisions. Instead of running the same instructions every time, your code can choose different paths depending on the situation—just like you do in everyday life. In JavaScript and Google Apps Script, the primary tool for decision‑making is the **if statement**.

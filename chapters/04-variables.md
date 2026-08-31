@@ -2,8 +2,6 @@
 _$_import: monaco
 ---
 
-# Variables and Data
-
 ## What Variables Are and Why They Matter
 
 As you begin writing programs that do more than print a message or perform a single calculation, you need a way to store information—something your code can remember, reuse, and change as it runs. That’s exactly what **variables** are for. A variable is a named container that holds a piece of data. You can think of it like a labeled box: you put something inside, give the box a name, and later you can open it, change what’s inside, or use its contents in a calculation.
