@@ -6,7 +6,7 @@ _junk: morano
 
 ## What Programming Actually Is
 
-Programming is the art of giving clear, precise instructions to a computer so it can perform tasks on your behalf. At its core, it’s a conversation—one where you learn to speak in a language the computer understands, and the computer responds by doing exactly what you asked. Not “sort of” what you asked, not what you _meant_ to ask, but precisely what your instructions describe. That precision is what makes programming powerful (and occasionally humbling).
+Programming is the art of giving clear, precise instructions to a computer so it can perform tasks on your behalf. At its core, it’s a conversation—one where you learn to speak in a language the computer understands, and the computer responds by doing exactly what you asked. Not “sort of” what you asked, not what you _meant_ to ask, but precisely what your instructions describe. That precision is what makes programming powerful and occasionally humbling).
 
 When you write a program, you’re breaking a problem into smaller steps and expressing those steps in a structured, logical way. A recipe is a program. A set of directions is a program. Even a morning routine is a kind of program. The difference is that computers don’t fill in the gaps the way humans do. If a recipe says “cook until done,” a person can figure that out. A computer cannot. It needs explicit steps, in order, with no ambiguity.
 
