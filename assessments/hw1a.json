@@ -1,0 +1,25 @@
+{
+  "title": "test assignment",
+  "text": "",
+  "assessmentType": "sql",
+  "schema": "delete me",
+  "scoreVisibility": [
+    "student",
+    "professor"
+  ],
+  "tasks": [
+    {
+      "text": "",
+      "start": "",
+      "key": [
+        ""
+      ],
+      "lines": 5,
+      "points": 10
+    }
+  ],
+  "labels": [
+    "schema",
+    "assessmentType"
+  ]
+}

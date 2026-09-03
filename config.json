@@ -10,11 +10,7 @@
   "pagesProjectName": "book-js",
   "cloudflareAccountId": "0bfdb544606ce71a8c67be03fabd48ee",
   "appSlug": "js",
-  "pro": {
-    "contentDir": "../pro/content",
-    "slug": "ppwjs",
-    "title": "Personal Productivity with JavaScript"
-  },
+  "system": "dev",
   "versions": {
     "alpha": {
       "chapters": [
